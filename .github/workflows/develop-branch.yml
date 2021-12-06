@@ -1,0 +1,30 @@
+name: Develop Branch Workflow
+
+on:
+  # push:
+  workflow_dispatch:
+    branches: [ develop ]
+    paths-ignore:
+    - '.github/**'
+
+
+jobs:
+  Build-Test-Deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: Dev
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup & Configure Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+          registry-url: https://npm.pkg.github.com/
+      - name: Build
+        run: npm install; npm run build
+      - name: Run Unit Tests
+        run: npm run test
+
