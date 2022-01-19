@@ -8,6 +8,11 @@ function App() {
           Hello CAM-API-Portal
         </p>
       </header>
+
+      <div className="App-body">
+        <h1>CAM API Portal</h1>
+
+      </div>
     </div>
   );
 }
