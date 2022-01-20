@@ -1,10 +1,14 @@
 name: Develop Branch Workflow
 
-on:
-   push:
-    branches: [ develop, main ]
-    paths-ignore:
-    - '.github/**'
+on: 
+    push:
+      branches: [ develop, main ]
+      paths-ignore:
+      - '.github/**'
+    pull_request:
+      branches: [ develop, main ]
+      paths-ignore:
+      - '.github/**'
 
 
 jobs:
@@ -26,4 +30,15 @@ jobs:
         run: npm install; npm run build
       - name: Run Unit Tests
         run: npm run test
+      - name: Build for scan
+        if: ${{ success() }}
+        run: docker-compose up -d && echo "Completed Build for scan"
+      - name: ZAP Scan
+        if: ${{ success() }}
+        uses: zaproxy/action-baseline@v0.3.0
+        with:
+          target: 'http://localhost:9080'
+          cmd_options: '-I' # Don't fail on WARNings
 
+      - name: clean up after scan
+        run: docker-compose down && echo "Completed clean up after scan"

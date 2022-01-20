@@ -11,6 +11,11 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -38,6 +43,5 @@
     ]
   },
   "devDependencies": {
-    "husky": "^7.0.4"
   }
 }
