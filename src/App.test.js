@@ -1,14 +1,30 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
-import { BrowserRouter } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
+import { HomePage } from "./components/HomePage";
 
-test("renders learn react link", () => {
-  render(
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  );
+jest.mock("./components/HomePage");
 
-  const linkElement = screen.getByText(/CAM-API-Portal Subheader/i);
-  expect(linkElement).toBeInTheDocument();
+describe("test the router function", () => {
+  it("returns a 404 when a bad page is requested", () => {
+    render(
+      <MemoryRouter initialEntries={["/not-found"]}>
+        <App />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByText(/404/i)).toBeInTheDocument();
+  });
+
+  it("returns the home page when the home page is requested", () => {
+    HomePage.mockImplementation(() => <div>Home Page</div>);
+
+    render(
+      <MemoryRouter initialEntries={["/home"]}>
+        <App />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByText(/Home Page/i)).toBeInTheDocument();
+  });
 });
