@@ -6,7 +6,7 @@ import {
   PrimaryNav,
   NavMenuButton,
   NavDropDownButton,
-  MegaMenu,
+  Menu,
 } from "@trussworks/react-uswds";
 
 export const SubHeader = () => {
@@ -65,7 +65,7 @@ export const SubHeader = () => {
         isCurrent={true}
         style={{ color: "#ffffff" }}
       />
-      <MegaMenu
+      <Menu
         key="one"
         items={testItemsMegaOne}
         isOpen={isOpen[0]}
@@ -82,7 +82,7 @@ export const SubHeader = () => {
         label="Help/Resources"
         style={{ color: "#ffffff" }}
       />
-      <MegaMenu
+      <Menu
         key="one"
         items={testItemsMegaTwo}
         isOpen={isOpen[1]}

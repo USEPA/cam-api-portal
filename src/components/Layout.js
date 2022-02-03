@@ -4,16 +4,11 @@ import { SubHeader } from "./SubHeader/SubHeader";
 
 export const Layout = () => {
   return (
-    <>
+    <div>
       <SubHeader />
-      <div>
-        <header className="App-header">
-          <p>CAM-API-Portal Subheader</p>
-        </header>
-        <main>
-          <Outlet />
-        </main>
-      </div>
-    </>
+      <main>
+        <Outlet />
+      </main>
+    </div>
   );
 };
