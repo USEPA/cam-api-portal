@@ -28,6 +28,8 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - name: Build
         run: npm install; npm run build
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Run Unit Tests
         run: npm run test
       - name: Build for scan
