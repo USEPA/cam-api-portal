@@ -8,80 +8,15 @@ import {
 } from "@trussworks/react-uswds";
 
 export const SubHeader = () => {
-  const [expanded, setExpanded] = useState(false);
-  const onClick = (): void => setExpanded((prvExpanded) => !prvExpanded);
   const [isOpen, setIsOpen] = useState([false, false]);
+  const onToggle = (index: number): void => {
+    setIsOpen((prevIsOpen) => {
+      const newIsOpen = [false, false];
 
-  const testItemsMegaOne = [
-    [
-      <a href="#linkOne" key="one">
-        Simple link one
-      </a>,
-      <a href="#linkTwo" key="two">
-        Simple link two
-      </a>,
-    ],
-    [
-      <a href="#linkThree" key="three">
-        Simple link three
-      </a>,
-      <a href="#linkFour" key="four">
-        Simple link four
-      </a>,
-    ],
-  ];
-
-  const testItemsMegaTwo = [
-    [
-      <a href="#linkFive" key="one">
-        Simple link five
-      </a>,
-      <a href="#linkSix" key="two">
-        Simple link six
-      </a>,
-    ],
-    [
-      <a href="#linkSeven" key="three">
-        Simple link seven
-      </a>,
-      <a href="#linkEight" key="four">
-        Simple link eight
-      </a>,
-    ],
-  ];
-
-  const testItemsMegaMenu = [
-    <>
-      <NavDropDownButton
-        /*onToggle={(): void => {
-          onToggle(0, setIsOpen)
-        }}*/
-        menuId="testDropDownOne"
-        isOpen={isOpen[0]}
-        label="API Docs"
-        isCurrent={true}
-        style={{ color: "#ffffff" }}
-      />
-    </>,
-    <>
-      <NavDropDownButton
-        /*onToggle={(): void => {
-          onToggle(1, setIsOpen)
-        }}*/
-        menuId="testDropDownTwo"
-        isOpen={isOpen[1]}
-        label="Help/Resources"
-        style={{ color: "#ffffff" }}
-      />
-    </> /* //Parent links adjacent to API Docs and Help/Resources NavLabels// ,
-    <a href="#two" key="two" className="usa-nav__link">
-      <span>Parent link</span>
-    </a>,
-    <a href="#three" key="three" className="usa-nav__link">
-      <span>Parent link</span>
-    </a>,*/,
-  ];
-
+      newIsOpen[index] = !prevIsOpen[index];
+      return newIsOpen;
+    });
+  };
   return (
     <>
       <div className="bg-primary-dark">
@@ -96,10 +31,30 @@ export const SubHeader = () => {
 
               <div className="float-right">
                 <PrimaryNav
-                  items={testItemsMegaMenu}
-                  mobileExpanded={expanded}
-                  onToggleMobileNav={onClick}
-                ></PrimaryNav>
+                  items={[
+                    <NavDropDownButton
+                      style={{ color: "#ffffff" }}
+                      key="testItemOne"
+                      label="API Docs"
+                      menuId="test"
+                      isOpen={isOpen[0]}
+                      onToggle={(): void => {
+                        onToggle(0);
+                      }}
+                    />,
+                    <NavDropDownButton
+                      style={{ color: "#ffffff" }}
+                      key="testItemTwo"
+                      label="Help/Resources"
+                      menuId="testTwo"
+                      isOpen={isOpen[1]}
+                      onToggle={(): void => {
+                        onToggle(1);
+                      }}
+                      isCurrent={true}
+                    />,
+                  ]}
+                />
               </div>
             </div>
           </div>
