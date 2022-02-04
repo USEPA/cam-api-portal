@@ -4,14 +4,13 @@ import {
   Header,
   Title,
   PrimaryNav,
-  NavMenuButton,
   NavDropDownButton,
-  Menu,
 } from "@trussworks/react-uswds";
 
 export const SubHeader = () => {
   const [expanded, setExpanded] = useState(false);
   const onClick = (): void => setExpanded((prvExpanded) => !prvExpanded);
+  const [isOpen, setIsOpen] = useState([false, false]);
 
   const testItemsMegaOne = [
     [
@@ -51,8 +50,6 @@ export const SubHeader = () => {
     ],
   ];
 
-  const [isOpen, setIsOpen] = useState([false, false]);
-
   const testItemsMegaMenu = [
     <>
       <NavDropDownButton
@@ -65,12 +62,6 @@ export const SubHeader = () => {
         isCurrent={true}
         style={{ color: "#ffffff" }}
       />
-      <Menu
-        key="one"
-        items={testItemsMegaOne}
-        isOpen={isOpen[0]}
-        id="testDropDownOne"
-      />
     </>,
     <>
       <NavDropDownButton
@@ -81,12 +72,6 @@ export const SubHeader = () => {
         isOpen={isOpen[1]}
         label="Help/Resources"
         style={{ color: "#ffffff" }}
-      />
-      <Menu
-        key="one"
-        items={testItemsMegaTwo}
-        isOpen={isOpen[1]}
-        id="testDropDownTwo"
       />
     </> /* //Parent links adjacent to API Docs and Help/Resources NavLabels// ,
     <a href="#two" key="two" className="usa-nav__link">
@@ -110,8 +95,6 @@ export const SubHeader = () => {
               </Title>
 
               <div className="float-right">
-                <NavMenuButton onClick={onClick} label="Menu" />
-
                 <PrimaryNav
                   items={testItemsMegaMenu}
                   mobileExpanded={expanded}
