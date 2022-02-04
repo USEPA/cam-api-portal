@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { Layout } from "./Layout";
 
-test("renders the Layout for the CAM API pages", () => {
+test("render the Layout for the CAM API pages", () => {
   render(
     <MemoryRouter>
       <Layout />
