@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { About } from "./About";
 
@@ -17,8 +17,8 @@ describe("Test the About page", () => {
     );
     expect(linkElement).toBeInTheDocument();
 
-    const btns = screen.getAllByText("Request an API Key");
-    expect(btns).toBeDefined();
+    //const btns = screen.getByText("Request an API Key");
+    //expect(btns).toBeDefined();
   });
 
   test("renders the CAMPD section", () => {
@@ -34,8 +34,8 @@ describe("Test the About page", () => {
     );
     expect(linkElement).toBeInTheDocument();
 
-    const btns = screen.getAllByText("CAMPD Application");
-    expect(btns).toBeDefined();
+    //const btns = screen.getAllByText("CAMPD Application");
+    //expect(btns).toBeDefined();
   });
 
   test("renders the ECMPS 2.0 section", () => {
@@ -51,7 +51,31 @@ describe("Test the About page", () => {
     );
     expect(linkElement).toBeInTheDocument();
 
-    const btns = screen.getAllByText("ECMPS 2.0 Application");
-    expect(btns).toBeDefined();
+    //const btns = screen.getAllByText("ECMPS 2.0 Application");
+    //expect(btns).toBeDefined();
+  });
+
+  test("renders the About section to test buttons", () => {
+    const query = render(
+      <MemoryRouter>
+        <About />
+      </MemoryRouter>
+    );
+
+    const { container, getByText } = query;
+
+    const apikey = screen.getByText("Request an API Key");
+    const campdapp = screen.getByText("CAMPD Application");
+    const ecmpsapp = screen.getByText("ECMPS 2.0 Application");
+
+    expect(apikey).toBeTruthy();
+    expect(campdapp).toBeTruthy();
+    expect(ecmpsapp).toBeTruthy();
+
+    fireEvent.click(getByText("Request an API Key"));
+    fireEvent.click(getByText("CAMPD Application"));
+    fireEvent.click(getByText("ECMPS 2.0 Application"));
+
+    expect(container.querySelector(".usa-button")).toBeInTheDocument();
   });
 });
