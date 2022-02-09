@@ -3,6 +3,8 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { About } from "./About";
 
+window.open = jest.fn(); // mock window.open for testing the buttons
+
 describe("Test the About page", () => {
   test("renders the About section", () => {
     render(
@@ -33,7 +35,6 @@ describe("Test the About page", () => {
         /The Clean Air Markets Program Data \(CAMPD\) web application is the data publication warehouse for allowance, compliance, emissions and facility\/unit attributes data collected under EPA’s federal market-based trading programs./i
     );
     expect(linkElement).toBeInTheDocument();
-
     //const btns = screen.getAllByText("CAMPD Application");
     //expect(btns).toBeDefined();
   });
@@ -56,6 +57,7 @@ describe("Test the About page", () => {
   });
 
   test("renders the About section to test buttons", () => {
+    window.open.mockClear();
     const query = render(
       <MemoryRouter>
         <About />
