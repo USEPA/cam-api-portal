@@ -1,20 +1,34 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
-const { axe, toHaveNoViolations } = require("jest-axe");
+import { render, screen } from "@testing-library/react";
+import App from "./App";
+import { MemoryRouter } from "react-router-dom";
+import { HomePage } from "./components/HomePage";
+import { NotFoundPage } from "./components/NotFoundPage";
 
+jest.mock("./components/HomePage");
+jest.mock("./components/NotFoundPage");
 
-test('renders hello CAM-API-Portal text', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Hello CAM-API-Portal/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe("test the router function", () => {
+  it("returns a 404 when a bad page is requested", () => {
+    NotFoundPage.mockImplementation(() => <div>Not Found</div>);
 
+    render(
+      <MemoryRouter initialEntries={["/not-found"]}>
+        <App />
+      </MemoryRouter>
+    );
 
-expect.extend(toHaveNoViolations);
+    expect(screen.getByText(/Not Found/i)).toBeInTheDocument();
+  });
 
-it("should pass axe accessibility tests", async () => {
-    const { container } = render(<App />);
-    const results = await axe(container);
+  it("returns the home page when the home page is requested", () => {
+    HomePage.mockImplementation(() => <div>Home Page</div>);
 
-    expect(results).toHaveNoViolations();
+    render(
+      <MemoryRouter initialEntries={["/home"]}>
+        <App />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByText(/Home Page/i)).toBeInTheDocument();
+  });
 });

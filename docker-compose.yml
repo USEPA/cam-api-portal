@@ -1,0 +1,11 @@
+web:
+  # Use stock NGINX container from Docker Hub
+  image: nginx
+  volumes:
+    - ./etc/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    - ./build:/usr/share/nginx/html
+  ports:
+    # Stock container listens on port 80
+    - "9080:80"
+
+
