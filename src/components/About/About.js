@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Button, GridContainer, Grid } from "@trussworks/react-uswds";
+import { WhatIsNewBox } from "@us-epa-camd/easey-design-system";
 
 export const About = () => {
   return (
@@ -24,8 +25,8 @@ export const About = () => {
           </Button>
         </Grid>
 
-        <Grid desktop={{ col: 4 }}>
-          <p>Insert What's New box here</p>
+        <Grid desktop={{ col: 4 }} className="padding-y-1 padding-x-1">
+          <WhatIsNewBox title="What's New" text="Lorem ipsum dolor sit amet" />
         </Grid>
       </Grid>
 

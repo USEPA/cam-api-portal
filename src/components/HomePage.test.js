@@ -4,6 +4,8 @@ import { MemoryRouter } from "react-router-dom";
 import { HomePage } from "./HomePage";
 import { axe, toHaveNoViolations } from "jest-axe";
 
+jest.setTimeout(30000);
+
 describe("test the home page", () => {
   it("renders the main content", () => {
     render(
