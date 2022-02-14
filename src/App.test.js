@@ -31,15 +31,4 @@ describe("test the router function", () => {
 
     expect(screen.getByText(/Home Page/i)).toBeInTheDocument();
   });
-
-});
-
-
-expect.extend(toHaveNoViolations);
-
-it("should pass axe accessibility tests", async () => {
-    const { container } = render(<App />);
-    const results = await axe(container);
-
-    expect(results).toHaveNoViolations();
 });
