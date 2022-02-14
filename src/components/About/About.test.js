@@ -2,7 +2,7 @@ import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { About } from "./About";
-
+import { axe, toHaveNoViolations } from "jest-axe";
 window.open = jest.fn(); // mock window.open for testing the buttons
 
 describe("Test the About page", () => {
@@ -79,5 +79,18 @@ describe("Test the About page", () => {
     fireEvent.click(getByText("ECMPS 2.0 Application"));
 
     expect(container.querySelector(".usa-button")).toBeInTheDocument();
+  });
+
+  expect.extend(toHaveNoViolations);
+
+  it("should pass axe accessibility tests", async () => {
+    const { container } = render(
+      <MemoryRouter>
+        <About />
+      </MemoryRouter>
+    );
+    const results = await axe(container);
+
+    expect(results).toHaveNoViolations();
   });
 });
