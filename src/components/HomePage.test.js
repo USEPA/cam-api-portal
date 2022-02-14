@@ -2,6 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { HomePage } from "./HomePage";
+import { axe, toHaveNoViolations } from "jest-axe";
 
 describe("test the home page", () => {
   it("renders the main content", () => {
@@ -23,4 +24,17 @@ describe("test the home page", () => {
     const textElement = screen.getByText(/What's new/i);
     expect(textElement).toBeInTheDocument();
   });
+});
+
+expect.extend(toHaveNoViolations);
+
+it("should pass axe accessibility tests", async () => {
+  const { container } = render(
+    <MemoryRouter>
+      <HomePage />
+    </MemoryRouter>
+  );
+  const results = await axe(container);
+
+  expect(results).toHaveNoViolations();
 });
