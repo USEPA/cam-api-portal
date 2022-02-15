@@ -1,4 +1,4 @@
-import { CardGroup, Grid, GridContainer } from "@trussworks/react-uswds";
+import { Grid, GridContainer } from "@trussworks/react-uswds";
 import React from "react";
 
 import { About } from "./About/About.js";
