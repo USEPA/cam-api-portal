@@ -15,8 +15,19 @@ describe("Test the API Docs Card", () => {
       /API Documentation/i &&
         /Lorem ipsum dolor sit amet, consectetur adipiscing elit./i
     );
-    //Documentation link test
+
     expect(linkElement).toBeInTheDocument();
+  });
+
+  test("renders the Documentation link text", () => {
+    render(
+      <MemoryRouter>
+        <APIDocsCard />
+      </MemoryRouter>
+    );
+    const linkElement = screen.getByRole("link");
+
+    expect(linkElement).toHaveTextContent("Documentation");
   });
 });
 
