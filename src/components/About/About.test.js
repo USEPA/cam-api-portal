@@ -84,11 +84,7 @@ describe("Test the About page", () => {
   });
 
   it("should render the What's New box", () => {
-    render(
-      <MemoryRouter>
-        <About />
-      </MemoryRouter>
-    );
+    render(<About />);
 
     const whatsNew = screen.getByText(/What's New/i);
 
@@ -98,11 +94,7 @@ describe("Test the About page", () => {
   expect.extend(toHaveNoViolations);
 
   it("should pass axe accessibility tests", async () => {
-    const { container } = render(
-      <MemoryRouter>
-        <About />
-      </MemoryRouter>
-    );
+    const { container } = render(<About />);
     const results = await axe(container);
 
     expect(results).toHaveNoViolations();

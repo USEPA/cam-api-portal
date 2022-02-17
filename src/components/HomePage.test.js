@@ -8,35 +8,17 @@ jest.setTimeout(30000);
 
 describe("test the home page", () => {
   it("renders the main content", () => {
-    render(
-      <MemoryRouter>
-        <HomePage />
-      </MemoryRouter>
-    );
+    render(<HomePage />);
     const textElement = screen.getByText(/About CAM API/i);
     expect(textElement).toBeInTheDocument();
   });
 
-  it("renders the what is new box", () => {
-    render(
-      <MemoryRouter>
-        <HomePage />
-      </MemoryRouter>
-    );
-    const textElement = screen.getByText(/What's new/i);
-    expect(textElement).toBeInTheDocument();
+  expect.extend(toHaveNoViolations);
+
+  it("should pass axe accessibility tests", async () => {
+    const { container } = render(<HomePage />);
+    const results = await axe(container);
+
+    expect(results).toHaveNoViolations();
   });
-});
-
-expect.extend(toHaveNoViolations);
-
-it("should pass axe accessibility tests", async () => {
-  const { container } = render(
-    <MemoryRouter>
-      <HomePage />
-    </MemoryRouter>
-  );
-  const results = await axe(container);
-
-  expect(results).toHaveNoViolations();
 });
