@@ -4,26 +4,21 @@ import { MemoryRouter } from "react-router-dom";
 import { HomePage } from "./HomePage";
 import { axe, toHaveNoViolations } from "jest-axe";
 
-test("renders the home page", () => {
-  render(
-    <MemoryRouter>
-      <HomePage />
-    </MemoryRouter>
-  );
+jest.setTimeout(30000);
 
-  const linkElement = screen.getByText(/About CAM API/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe("test the home page", () => {
+  it("renders the main content", () => {
+    render(<HomePage />);
+    const textElement = screen.getByText(/About CAM API/i);
+    expect(textElement).toBeInTheDocument();
+  });
 
-expect.extend(toHaveNoViolations);
+  expect.extend(toHaveNoViolations);
 
-it("should pass axe accessibility tests", async () => {
-  const { container } = render(
-    <MemoryRouter>
-      <HomePage />
-    </MemoryRouter>
-  );
-  const results = await axe(container);
+  it("should pass axe accessibility tests", async () => {
+    const { container } = render(<HomePage />);
+    const results = await axe(container);
 
-  expect(results).toHaveNoViolations();
+    expect(results).toHaveNoViolations();
+  });
 });
