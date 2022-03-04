@@ -27,44 +27,19 @@ export const HelpResourceCard = () => {
         <CardFooter>
           <ul className="usa-list">
             <li>
-              <Link
-                href={"https://www.epa.gov/airmarkets/overview"}
-                target="_blank"
-              >
-                Overview
-              </Link>
+              <Link to="/overview">Overview</Link>
             </li>
             <li>
-              <Link
-                href={"https://www.epa.gov/airmarkets/data-resources"}
-                target="_blank"
-              >
-                Related Resources
-              </Link>
+              <Link to="/related">Related Resources</Link>
             </li>
             <li>
-              <Link
-                href={"https://www.epa.gov/airmarkets/faqs"}
-                target="_blank"
-              >
-                FAQs
-              </Link>
+              <Link to="/faq">FAQs</Link>
             </li>
             <li>
-              <Link
-                href={"https://www.epa.gov/airmarkets/release-notes"}
-                target="_blank"
-              >
-                Release Notes
-              </Link>
+              <Link to="/release">Release Notes</Link>
             </li>
             <li>
-              <Link
-                href={"https://www.epa.gov/airmarkets/contact-us"}
-                target="_blank"
-              >
-                Contact Us
-              </Link>
+              <Link to="/contact">Contact Us</Link>
             </li>
           </ul>
         </CardFooter>
