@@ -1,11 +1,10 @@
 import React from "react";
-
+import { Link as RouterLink } from "react-router-dom";
 import {
   Card,
   CardHeader,
   CardBody,
   CardFooter,
-  Link,
   CardGroup,
 } from "@trussworks/react-uswds";
 
@@ -27,19 +26,19 @@ export const HelpResourceCard = () => {
         <CardFooter>
           <ul className="usa-list">
             <li>
-              <Link to="/overview">Overview</Link>
+              <RouterLink to="/overview">Overview</RouterLink>
             </li>
             <li>
-              <Link to="/related">Related Resources</Link>
+              <RouterLink to="/related">Related Resources</RouterLink>
             </li>
             <li>
-              <Link to="/faq">FAQs</Link>
+              <RouterLink to="/faq">FAQs</RouterLink>
             </li>
             <li>
-              <Link to="/release">Release Notes</Link>
+              <RouterLink to="/release">Release Notes</RouterLink>
             </li>
             <li>
-              <Link to="/contact">Contact Us</Link>
+              <RouterLink to="/contact">Contact Us</RouterLink>
             </li>
           </ul>
         </CardFooter>
