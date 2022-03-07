@@ -6,7 +6,11 @@ import { MemoryRouter } from "react-router-dom";
 
 describe("Test the Help Resource Card", () => {
   test("renders the card header text", () => {
-    render(<HelpResourceCard />, { wrapper: MemoryRouter });
+    render(
+      <MemoryRouter>
+        <HelpResourceCard />
+      </MemoryRouter>
+    );
     expect(screen.getByText(/Help & Resource/i)).toBeInTheDocument();
   });
 });
@@ -14,7 +18,11 @@ describe("Test the Help Resource Card", () => {
 expect.extend(toHaveNoViolations);
 
 it("should pass axe accessibility tests", async () => {
-  const { container } = render(<HelpResourceCard />, { wrapper: MemoryRouter });
+  const { container } = render(
+    <MemoryRouter>
+      <HelpResourceCard />
+    </MemoryRouter>
+  );
   const results = await axe(container);
 
   expect(results).toHaveNoViolations();
