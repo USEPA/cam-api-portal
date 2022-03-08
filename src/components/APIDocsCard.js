@@ -1,12 +1,13 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import {
   Card,
   CardHeader,
   CardBody,
   CardFooter,
   IconContentCopy,
-  Link,
   CardGroup,
 } from "@trussworks/react-uswds";
 
@@ -24,7 +25,9 @@ export const APIDocsCard = () => {
         </CardBody>
 
         <CardFooter>
-          <Link href={"https://www.epa.gov/"}>Documentation</Link>
+          <Link to="/documentation" aria-label={"Documentation"}>
+            Documentation
+          </Link>
         </CardFooter>
       </Card>
     </CardGroup>
