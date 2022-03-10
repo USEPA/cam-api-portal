@@ -1,5 +1,6 @@
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
+import { GrCircleInformation } from "react-icons/gr";
 import {
   Card,
   CardHeader,
@@ -9,11 +10,14 @@ import {
 } from "@trussworks/react-uswds";
 
 export const HelpResourceCard = () => {
+  const iconStyles = { fontSize: "2em" };
+
   return (
     <CardGroup>
       <Card>
-        <CardHeader>
+        <CardHeader align="center">
           <h2>Help & Resources</h2>
+          <GrCircleInformation style={iconStyles} />
         </CardHeader>
 
         <CardBody>
@@ -24,23 +28,7 @@ export const HelpResourceCard = () => {
         </CardBody>
 
         <CardFooter>
-          <ul className="usa-list">
-            <li>
-              <RouterLink to="/overview">Overview</RouterLink>
-            </li>
-            <li>
-              <RouterLink to="/related">Related Resources</RouterLink>
-            </li>
-            <li>
-              <RouterLink to="/faq">FAQs</RouterLink>
-            </li>
-            <li>
-              <RouterLink to="/release">Release Notes</RouterLink>
-            </li>
-            <li>
-              <RouterLink to="/contact">Contact Us</RouterLink>
-            </li>
-          </ul>
+          <RouterLink to="/overview">Overview</RouterLink>
         </CardFooter>
       </Card>
     </CardGroup>
