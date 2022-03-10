@@ -1,8 +1,8 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
-import { HomePage } from "./HomePage";
 import { axe, toHaveNoViolations } from "jest-axe";
+import { HomePage } from "./HomePage";
+import { MemoryRouter } from "react-router-dom";
 
 test("renders the home page", () => {
   render(

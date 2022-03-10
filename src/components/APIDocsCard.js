@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 
 import {
   Card,
@@ -25,9 +25,9 @@ export const APIDocsCard = () => {
         </CardBody>
 
         <CardFooter>
-          <Link to="/documentation" aria-label={"Documentation"}>
+          <RouterLink to="/documentation" aria-label={"Documentation"}>
             Documentation
-          </Link>
+          </RouterLink>
         </CardFooter>
       </Card>
     </CardGroup>
