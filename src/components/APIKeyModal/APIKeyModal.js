@@ -1,5 +1,4 @@
 import React from "react";
-import { APIKeyRequestForm } from "./APIKeyRequestForm";
 import {
   Modal,
   ModalHeading,
@@ -8,7 +7,7 @@ import {
 
 export const APIKeyModal = () => {
   const buttonText = "Request an API Key";
-  const modalHeading = "Generate an API Key";
+  const modalHeading = "Sign Up for an API Key";
 
   const modalRef = React.useRef(false);
 
@@ -32,7 +31,7 @@ export const APIKeyModal = () => {
         aria-describedby="modal-decription"
       >
         <ModalHeading id="modal-heading">{modalHeading}</ModalHeading>
-        <APIKeyRequestForm />
+        <div id="apidatagov_signup">Loading signup form...</div>
       </Modal>
     </div>
   );
