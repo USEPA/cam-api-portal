@@ -3,15 +3,13 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { About } from "./About";
 import { axe, toHaveNoViolations } from "jest-axe";
+
 window.open = jest.fn(); // mock window.open for testing the buttons
+jest.setTimeout(30000);
 
 describe("Test the About page", () => {
   test("renders the About section", () => {
-    render(
-      <MemoryRouter>
-        <About />
-      </MemoryRouter>
-    );
+    render(<About />);
 
     const linkElement = screen.getByText(
       /About CAM API/i &&
@@ -24,11 +22,7 @@ describe("Test the About page", () => {
   });
 
   test("renders the CAMPD section", () => {
-    render(
-      <MemoryRouter>
-        <About />
-      </MemoryRouter>
-    );
+    render(<About />);
 
     const linkElement = screen.getByText(
       /Clean Air Markets Program Data/i &&
@@ -40,11 +34,7 @@ describe("Test the About page", () => {
   });
 
   test("renders the ECMPS 2.0 section", () => {
-    render(
-      <MemoryRouter>
-        <About />
-      </MemoryRouter>
-    );
+    render(<About />);
 
     const linkElement = screen.getByText(
       /ECMPS 2.0 Beta/i &&
@@ -58,11 +48,7 @@ describe("Test the About page", () => {
 
   test("renders the About section to test buttons", () => {
     window.open.mockClear();
-    const query = render(
-      <MemoryRouter>
-        <About />
-      </MemoryRouter>
-    );
+    const query = render(<About />);
 
     const { container, getByText } = query;
 
@@ -81,14 +67,18 @@ describe("Test the About page", () => {
     expect(container.querySelector(".usa-button")).toBeInTheDocument();
   });
 
+  it("should render the What's New box", () => {
+    render(<About />);
+
+    const whatsNew = screen.getByText(/What's New/i);
+
+    expect(whatsNew).toBeInTheDocument();
+  });
+
   expect.extend(toHaveNoViolations);
 
   it("should pass axe accessibility tests", async () => {
-    const { container } = render(
-      <MemoryRouter>
-        <About />
-      </MemoryRouter>
-    );
+    const { container } = render(<About />);
     const results = await axe(container);
 
     expect(results).toHaveNoViolations();
