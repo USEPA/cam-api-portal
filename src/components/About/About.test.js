@@ -3,7 +3,9 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { About } from "./About";
 import { axe, toHaveNoViolations } from "jest-axe";
+
 window.open = jest.fn(); // mock window.open for testing the buttons
+jest.setTimeout(30000);
 
 describe("Test the About page", () => {
   test("renders the About section", () => {
@@ -63,6 +65,14 @@ describe("Test the About page", () => {
     fireEvent.click(getByText("ECMPS 2.0 Application"));
 
     expect(container.querySelector(".usa-button")).toBeInTheDocument();
+  });
+
+  it("should render the What's New box", () => {
+    render(<About />);
+
+    const whatsNew = screen.getByText(/What's New/i);
+
+    expect(whatsNew).toBeInTheDocument();
   });
 
   expect.extend(toHaveNoViolations);
