@@ -18,7 +18,11 @@ test("renders the home page", () => {
 expect.extend(toHaveNoViolations);
 
 it("should pass axe accessibility tests", async () => {
-  const { container } = render(<HomePage />);
+  const { container } = render(
+    <MemoryRouter>
+      <HomePage />
+    </MemoryRouter>
+  );
   const results = await axe(container);
 
   expect(results).toHaveNoViolations();
