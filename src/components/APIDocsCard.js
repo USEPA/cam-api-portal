@@ -20,12 +20,12 @@ export const APIDocsCard = () => {
         </CardHeader>
 
         <CardBody>
-          <IconContentCopy size={4} aria-label={"Icon for API Docs card"} />
+          <IconContentCopy id = "aria-label-1" size={4} aria-label={"Icon for API Docs card"} />
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </CardBody>
 
         <CardFooter>
-          <RouterLink to="/documentation" aria-label={"Documentation"}>
+          <RouterLink id = "aria-label-2" to="/documentation" aria-label={"Documentation"}>
             Documentation
           </RouterLink>
         </CardFooter>
