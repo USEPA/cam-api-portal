@@ -4,7 +4,7 @@ import { HomePage } from "./HomePage";
 import { axe, toHaveNoViolations } from "jest-axe";
 import { MemoryRouter } from "react-router-dom";
 
-jest.setTimeout(30000);
+jest.setTimeout(100000);
 
 test("renders the home page", () => {
   render(
@@ -27,4 +27,3 @@ it("should pass axe accessibility tests", async () => {
 
   expect(results).toHaveNoViolations();
 });
-
