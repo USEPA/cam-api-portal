@@ -1,30 +1,17 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { MemoryRouter } from "react-router-dom";
 import { axe, toHaveNoViolations } from "jest-axe";
-import { APIDocsCard } from "./APIDocsCard";
+import { HomePageCards } from "./HomePageCards.js";
+import { MemoryRouter } from "react-router-dom";
 
 describe("Test the API Docs Card", () => {
   test("renders the card header text", () => {
     render(
       <MemoryRouter>
-        <APIDocsCard />
+        <HomePageCards />
       </MemoryRouter>
     );
-    const linkElement = screen.getByText(/API Documentation/i);
-
-    expect(linkElement).toBeInTheDocument();
-  });
-
-  test("renders the Documentation link text", () => {
-    render(
-      <MemoryRouter>
-        <APIDocsCard />
-      </MemoryRouter>
-    );
-    const APIdocParagraphElement = screen.getByRole("link");
-
-    expect(APIdocParagraphElement).toHaveTextContent("Documentation");
+    expect(screen.getByText(/API Documentation/i)).toBeInTheDocument();
   });
 });
 
@@ -33,7 +20,7 @@ expect.extend(toHaveNoViolations);
 it("should pass axe accessibility tests", async () => {
   const { container } = render(
     <MemoryRouter>
-      <APIDocsCard />
+      <HomePageCards />
     </MemoryRouter>
   );
   const results = await axe(container);
