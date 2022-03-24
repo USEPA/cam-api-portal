@@ -27,4 +27,3 @@ it("should pass axe accessibility tests", async () => {
 
   expect(results).toHaveNoViolations();
 });
-
