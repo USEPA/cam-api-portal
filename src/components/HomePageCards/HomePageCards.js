@@ -23,7 +23,7 @@ export const HomePageCards = () => {
           </CardHeader>
 
           <CardBody>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>View the API docs for all CAM API endpoints</p>
           </CardBody>
 
           <CardFooter>
