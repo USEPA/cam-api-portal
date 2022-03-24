@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Layout } from "./components/Layout";
-import { HomePage } from "./components/HomePage";
-import { NotFoundPage } from "./components/NotFoundPage";
+import { Layout } from "./components/Layout/Layout";
+import { HomePage } from "./components/HomePage/HomePage";
+import { NotFoundPage } from "./components/NotFoundPage/NotFoundPage";
 import { APIDocs } from "./components/APIDocs/APIDocs";
 import { HelpResources } from "./components/HelpResources/HelpResources";
 import "./App.css";
