@@ -1,17 +1,17 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { axe, toHaveNoViolations } from "jest-axe";
-import { HelpResourceCard } from "./HelpResourceCard";
+import { HomePageCards } from "./HomePageCards.js";
 import { MemoryRouter } from "react-router-dom";
 
-describe("Test the Help Resource Card", () => {
+describe("Test the API Docs Card", () => {
   test("renders the card header text", () => {
     render(
       <MemoryRouter>
-        <HelpResourceCard />
+        <HomePageCards />
       </MemoryRouter>
     );
-    expect(screen.getByText(/Help & Resource/i)).toBeInTheDocument();
+    expect(screen.getByText(/API Documentation/i)).toBeInTheDocument();
   });
 });
 
@@ -20,7 +20,7 @@ expect.extend(toHaveNoViolations);
 it("should pass axe accessibility tests", async () => {
   const { container } = render(
     <MemoryRouter>
-      <HelpResourceCard />
+      <HomePageCards />
     </MemoryRouter>
   );
   const results = await axe(container);
