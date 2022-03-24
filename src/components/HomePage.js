@@ -1,23 +1,22 @@
 import { Grid, GridContainer } from "@trussworks/react-uswds";
 import React from "react";
 import { About } from "./About/About.js";
-import { HelpResourceCard } from "./HelpResourceCard.js";
+import { HomePageCards } from "./HomePageCards/HomePageCards";
 
 export const HomePage = () => {
   return (
-    <GridContainer>
-      <Grid row className="padding-3">
-        <About />
-      </Grid>
+    <main>
+      <GridContainer>
+        <Grid row>
+          <Grid>
+            <About />
+          </Grid>
 
-      <Grid row gap>
-        <Grid desktop={{ col: true }} className="text-center">
-          <p>Insert API Docs Card</p>
+          <Grid row className="padding-2">
+            <HomePageCards />
+          </Grid>
         </Grid>
-        <Grid desktop={{ col: true }} className="text-left">
-          <HelpResourceCard />
-        </Grid>
-      </Grid>
-    </GridContainer>
+      </GridContainer>
+    </main>
   );
 };
