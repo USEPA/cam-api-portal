@@ -1,7 +1,7 @@
 import { Grid, GridContainer } from "@trussworks/react-uswds";
 import React from "react";
-import { About } from "./About/About.js";
-import { HomePageCards } from "./HomePageCards/HomePageCards";
+import { About } from "../About/About.js";
+import { HomePageCards } from "../HomePageCards/HomePageCards";
 
 export const HomePage = () => {
   return (

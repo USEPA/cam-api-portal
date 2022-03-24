@@ -5,7 +5,7 @@ import { About } from "./About";
 import { axe, toHaveNoViolations } from "jest-axe";
 
 window.open = jest.fn(); // mock window.open for testing the buttons
-jest.setTimeout(30000);
+jest.setTimeout(50000);
 
 describe("Test the About page", () => {
   test("renders the About section", () => {
