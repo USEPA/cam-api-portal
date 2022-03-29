@@ -4,7 +4,7 @@ import { HomePage } from "./HomePage";
 import { axe, toHaveNoViolations } from "jest-axe";
 import { MemoryRouter } from "react-router-dom";
 
-jest.setTimeout(60000);
+jest.setTimeout(100000);
 
 test("renders the home page", () => {
   render(
