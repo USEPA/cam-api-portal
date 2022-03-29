@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 import { HomePage } from "./HomePage";
 import { axe, toHaveNoViolations } from "jest-axe";
 import { MemoryRouter } from "react-router-dom";
@@ -17,7 +17,7 @@ test("renders the home page", () => {
 
 expect.extend(toHaveNoViolations);
 
-it("should pass axe accessibility tests", async () => {
+test("should pass axe accessibility tests", async () => {
   const { container } = render(
     <MemoryRouter>
       <HomePage />
