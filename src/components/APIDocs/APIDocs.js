@@ -30,7 +30,7 @@ export const APIDocs = () => {
       setAPIPages([...apiPages, ...page]);
     };
     fetchAPIPages();
-  }, []);
+  }, [apiPages]);
   return (
     <GridContainer>
       <Grid row gap>
