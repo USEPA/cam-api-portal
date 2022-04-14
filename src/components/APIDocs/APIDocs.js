@@ -1,10 +1,36 @@
-import { Grid, GridContainer } from "@trussworks/react-uswds";
+import {
+  Grid,
+  GridContainer,
+  CardGroup,
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Button,
+} from "@trussworks/react-uswds";
 import React from "react";
-import { AccountAPICard } from "./AccountAPICard.js";
-import { EmissionsAPICard } from "./EmissionsAPICard.js";
-import { FacilitiesAPICard } from "./FacilitiesAPICard.js";
+import { constants } from "../../helpers/constants";
 
 export const APIDocs = () => {
+  const [apiPages, setAPIPages] = React.useState([]);
+  React.useEffect(() => {
+    const fetchAPIPages = async () => {
+      const response = Promise.all(
+        constants.swaggerPages.map((page) => {
+          return fetch(page)
+            .then((response) => response.json())
+            .then((json) => {
+              json["url"] = page;
+              return json;
+            })
+            .catch((error) => console.error(error));
+        })
+      );
+      const page = await response;
+      setAPIPages([...apiPages, ...page]);
+    };
+    fetchAPIPages();
+  }, []);
   return (
     <GridContainer>
       <Grid row gap>
@@ -15,15 +41,29 @@ export const APIDocs = () => {
       </Grid>
 
       <Grid row gap>
-        <Grid desktop={{ col: true }} className="text-left">
-          <AccountAPICard />
-        </Grid>
-        <Grid desktop={{ col: true }} className="text-left">
-          <FacilitiesAPICard />
-        </Grid>
-        <Grid desktop={{ col: true }} className="text-left">
-          <EmissionsAPICard></EmissionsAPICard>
-        </Grid>
+        <CardGroup>
+          {apiPages.map((page, index) => {
+            let info = page.info;
+            return (
+              <Card gridLayout={{ desktop: { col: "fill" } }} key={index}>
+                <CardHeader align="center">
+                  <h3>{info.title}</h3>
+                </CardHeader>
+                <CardBody>
+                  <p>{info.description}</p>
+                </CardBody>
+                <CardFooter>
+                  <Button
+                    type="button"
+                    onClick={() => window.open(page.url, "_blank")}
+                  >
+                    Go to docs
+                  </Button>
+                </CardFooter>
+              </Card>
+            );
+          })}
+        </CardGroup>
       </Grid>
     </GridContainer>
   );
