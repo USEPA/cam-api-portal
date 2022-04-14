@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Button, GridContainer, Grid } from "@trussworks/react-uswds";
+import { APIKeyModal } from "../APIKeyModal/APIKeyModal";
 import { WhatIsNewBox } from "@us-epa-camd/easey-design-system";
 
 export const About = () => {
@@ -17,12 +18,7 @@ export const About = () => {
             platforms.
           </p>
 
-          <Button
-            className="usa-button"
-            onClick={() => window.open("https://epa.gov/", "_blank")}
-          >
-            Request an API Key
-          </Button>
+          <APIKeyModal />
         </Grid>
 
         <Grid desktop={{ col: 4 }} className="padding-y-1 padding-x-1">
