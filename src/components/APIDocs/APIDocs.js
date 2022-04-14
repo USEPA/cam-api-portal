@@ -26,11 +26,11 @@ export const APIDocs = () => {
             .catch((error) => console.error(error));
         })
       );
-      const page = await response;
-      setAPIPages([...apiPages, ...page]);
+      const pages = await response;
+      setAPIPages(pages);
     };
     fetchAPIPages();
-  }, [apiPages]);
+  }, []);
   return (
     <GridContainer>
       <Grid row gap>
@@ -39,7 +39,6 @@ export const APIDocs = () => {
           <p>Explore the CAM API Documentation</p>
         </Grid>
       </Grid>
-
       <Grid row gap>
         <CardGroup>
           {apiPages.map((page, index) => {
