@@ -2,7 +2,6 @@ import React from "react";
 
 import { Button, GridContainer, Grid } from "@trussworks/react-uswds";
 import { APIKeyModal } from "../APIKeyModal/APIKeyModal";
-import { WhatIsNewBox } from "@us-epa-camd/easey-design-system";
 import { Alert } from "@trussworks/react-uswds";
 
 export const About = () => {
