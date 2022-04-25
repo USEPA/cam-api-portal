@@ -27,7 +27,7 @@ describe("Test the About page", () => {
     expect(screen.getByText(/ECMPS 2.0 Beta/i)).toBeInTheDocument();
   });
 
-  test("renders the About section to test buttons", () => {
+  test("renders the About section to test links and buttons", () => {
     window.open.mockClear();
     const query = render(<About />);
 
@@ -36,17 +36,19 @@ describe("Test the About page", () => {
     expect(screen.getByText("Request an API Key")).toBeTruthy();
     expect(screen.getByText("CAMPD Application")).toBeTruthy();
     expect(screen.getByText("ECMPS 2.0 Application")).toBeTruthy();
+    expect(screen.getByText("here")).toBeTruthy();
 
     fireEvent.click(getByText("Request an API Key"));
     fireEvent.click(getByText("CAMPD Application"));
     fireEvent.click(getByText("ECMPS 2.0 Application"));
+    fireEvent.click(getByText("here"));
 
     expect(container.querySelector(".usa-button")).toBeInTheDocument();
   });
 
-  it("should render the What's New box", () => {
+  it("should render the Alert banner", () => {
     render(<About />);
-    expect(screen.getByText(/What's New/i)).toBeInTheDocument();
+    expect(screen.getByText(/Informative status/i)).toBeInTheDocument();
   });
 
   expect.extend(toHaveNoViolations);

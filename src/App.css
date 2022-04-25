@@ -47,3 +47,7 @@
     transform: rotate(360deg);
   }
 }
+
+.usa-alert {
+  text-align: left;
+}

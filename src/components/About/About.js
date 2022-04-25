@@ -3,10 +3,22 @@ import React from "react";
 import { Button, GridContainer, Grid } from "@trussworks/react-uswds";
 import { APIKeyModal } from "../APIKeyModal/APIKeyModal";
 import { WhatIsNewBox } from "@us-epa-camd/easey-design-system";
+import { Alert } from "@trussworks/react-uswds";
 
 export const About = () => {
   return (
     <GridContainer>
+      <Alert type="info" heading="Informative status" headingLevel="h4">
+        this is the first iteration of the CAM API portal, click{" "}
+        <a
+          href="https://www.epa.gov/airmarkets/forms/cam-api-contact-us"
+          target="_blank"
+          rel="noreferrer"
+        >
+          here
+        </a>{" "}
+        to add feedback.
+      </Alert>
       <Grid row gap>
         <Grid desktop={{ col: 8 }} className="text-left">
           <h1>About CAM API</h1>
@@ -21,9 +33,7 @@ export const About = () => {
           <APIKeyModal />
         </Grid>
 
-        <Grid desktop={{ col: 4 }} className="padding-y-1 padding-x-1">
-          <WhatIsNewBox title="What's New" text="Lorem ipsum dolor sit amet" />
-        </Grid>
+        <Grid desktop={{ col: 4 }} className="padding-y-1 padding-x-1"></Grid>
       </Grid>
 
       <Grid row gap>
