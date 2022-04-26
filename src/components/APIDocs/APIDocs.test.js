@@ -8,7 +8,11 @@ jest.setTimeout(30000);
 
 describe("test the APIDocs page", () => {
   it("renders the main content", () => {
-    render(<APIDocs />);
+    render(
+      <MemoryRouter>
+        <APIDocs />
+      </MemoryRouter>
+    );
     const textElement = screen.getByText(/APIDocs/i);
     expect(textElement).toBeInTheDocument();
   });

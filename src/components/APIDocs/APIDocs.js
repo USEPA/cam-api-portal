@@ -10,20 +10,27 @@ import {
 } from "@trussworks/react-uswds";
 import React from "react";
 import { constants } from "../../helpers/constants";
+import { useNavigate } from "react-router-dom";
+import { NotFoundPage } from "../NotFoundPage/NotFoundPage";
 
 export const APIDocs = () => {
+  const navigate = useNavigate();
+
   const [apiPages, setAPIPages] = React.useState([]);
   React.useEffect(() => {
     const fetchAPIPages = async () => {
       const response = Promise.all(
         constants.swaggerPages.map((page) => {
-          return fetch(page)
+          return fetch(page.url)
             .then((response) => response.json())
             .then((json) => {
-              json["url"] = page;
+              json["meta"] = page;
               return json;
             })
-            .catch((error) => console.error(error));
+            .catch((error) => {
+              console.log(error);
+              return <NotFoundPage />;
+            });
         })
       );
       const pages = await response;
@@ -44,7 +51,7 @@ export const APIDocs = () => {
           {apiPages.map((page, index) => {
             let info = page.info;
             return (
-              <Card gridLayout={{ desktop: { col: "fill" } }} key={index}>
+              <Card gridLayout={{ desktop: { col: 4 } }} key={index}>
                 <CardHeader align="center">
                   <h3>{info.title}</h3>
                 </CardHeader>
@@ -54,7 +61,7 @@ export const APIDocs = () => {
                 <CardFooter>
                   <Button
                     type="button"
-                    onClick={() => window.open(page.url, "_blank")}
+                    onClick={() => navigate(`/swagger/${page.meta.name}`)}
                   >
                     Go to docs
                   </Button>
