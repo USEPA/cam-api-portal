@@ -8,8 +8,12 @@ jest.setTimeout(30000);
 
 describe("test the Help & Resources page", () => {
   it("renders the main content", () => {
-    render(<HelpResources />);
-    const textElement = screen.getByText(/Help & Resources sections/i);
+    render(
+      <MemoryRouter>
+        <HelpResources />
+      </MemoryRouter>
+    );
+    const textElement = screen.getByText(/What to find/i);
     expect(textElement).toBeInTheDocument();
   });
 });

@@ -49,7 +49,7 @@ export const HomePageCards = () => {
           </CardBody>
 
           <CardFooter>
-            <RouterLink to="/overview">Overview</RouterLink>
+            <RouterLink to="/help-resources">Overview</RouterLink>
           </CardFooter>
         </Card>
       </CardGroup>
