@@ -2,6 +2,12 @@
 
 The Clean Air Markets (CAM) API Portal is the documentation site for a suite of API's that EPA's Clean Air Markets Division (CAMD) provides to access the data collected to run programs designed to reduce air pollution from power plants.  These APIs will also used by the Clean Air Markets Programd Data (CAMPD) site and the new version of the Emission Collection and Monitoring Plan System (ECMPS). 
 
+## npm login
+
+This project uses npm to install packages, start and testing the app, etc. Project contributors will need to use a personal access token (PAT) to authenticate to GitHub Packages. The PAT scopes should include repo and read:packages. You can authentiate to GitHub Packages by either logging into npm via the CLI or editing your ~/.npmrc file, see the [GitHub Guidance here](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-with-a-personal-access-token).
+
+After configuring your npm login, users may continue experiencing issues using npm and should run `npm clean cache -f` to clean the npm cache.
+
 ## Available Scripts
 
 In the project directory, you can run:
