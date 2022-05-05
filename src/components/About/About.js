@@ -8,7 +8,7 @@ export const About = () => {
   return (
     <GridContainer>
       <Alert type="info" heading="Informative status" headingLevel="h4">
-        this is the first iteration of the CAM API portal, click{" "}
+        This is the first iteration of the CAM API portal, click{" "}
         <a
           href="https://www.epa.gov/airmarkets/forms/cam-api-contact-us"
           target="_blank"
@@ -31,8 +31,6 @@ export const About = () => {
 
           <APIKeyModal />
         </Grid>
-
-        <Grid desktop={{ col: 4 }} className="padding-y-1 padding-x-1"></Grid>
       </Grid>
 
       <Grid row gap>
