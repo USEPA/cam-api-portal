@@ -17,3 +17,16 @@ describe("test the Help & Resources page", () => {
     expect(textElement).toBeInTheDocument();
   });
 });
+
+expect.extend(toHaveNoViolations);
+
+it("should pass axe accessibility tests", async () => {
+  const { container } = render(
+    <MemoryRouter>
+      <HelpResources />
+    </MemoryRouter>
+  );
+  const results = await axe(container);
+
+  expect(results).toHaveNoViolations();
+});

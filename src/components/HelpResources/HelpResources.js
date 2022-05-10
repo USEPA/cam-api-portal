@@ -1,19 +1,132 @@
 import React from "react";
 import { GridContainer, Grid } from "@trussworks/react-uswds";
-import { HelpResourcesCards } from "../HelpResourcesCards/HelpResourcesCards";
+import { Link as RouterLink } from "react-router-dom";
+
+/*Import Icons from https://designsystem.digital.gov/components/icon/ using title case*/
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  IconHelpOutline,
+  IconReduceCapacity,
+  IconFlag,
+  // IconMap,
+  IconAlternateEmail,
+  CardGroup,
+} from "@trussworks/react-uswds";
 
 export const HelpResources = () => {
   return (
     <GridContainer>
       <Grid row gap>
         <Grid desktop={{ col: 8 }} className="text-left">
-          <h1 style={{ textAlign: "left" }}>Help & Resources</h1>
-          <p style={{ textAlign: "left" }}>
-            What to find in Help & Resources sections
-          </p>
+          <h1>Help & Resources</h1>
+          <p>What to find in Help & Resources sections</p>
         </Grid>
         <Grid row className="padding-2">
-          <HelpResourcesCards />
+          <aside>
+            <CardGroup>
+              <Card gridLayout={{ tablet: { col: 4 } }}>
+                <CardHeader>
+                  <h2>Related Resources</h2>
+                  <IconReduceCapacity size={4} title="Icon for API Docs" />
+                </CardHeader>
+
+                <CardBody>
+                  <p>View resources related to CAMD data</p>
+                </CardBody>
+
+                <CardFooter>
+                  <RouterLink to="/related-resources">
+                    Related Resources
+                  </RouterLink>
+                </CardFooter>
+              </Card>
+
+              <Card gridLayout={{ tablet: { col: 4 } }}>
+                <CardHeader align="center">
+                  <h2>Release Notes</h2>
+                  <IconFlag
+                    size={4}
+                    title="Icon for other card"
+                    className="palette-color-grayscale"
+                  />
+                </CardHeader>
+
+                <CardBody>
+                  <p>Information on CAM API Updates.</p>
+                </CardBody>
+
+                <CardFooter>
+                  <RouterLink to="/release-notes">Release Notes</RouterLink>
+                </CardFooter>
+              </Card>
+
+              <Card gridLayout={{ tablet: { col: 4 } }}>
+                <CardHeader align="center">
+                  <h2>FAQs</h2>
+                  <IconHelpOutline
+                    size={4}
+                    title="Icon for other card"
+                    className="palette-color-grayscale"
+                  />
+                </CardHeader>
+
+                <CardBody>
+                  <p>Frequently Asked Questions about the CAM API.</p>
+                </CardBody>
+
+                <CardFooter>
+                  <RouterLink to="/faq">FAQ</RouterLink>
+                </CardFooter>
+              </Card>
+
+              {/* <Card gridLayout={{ tablet: { col: 4 } }}>
+                <CardHeader align="center">
+                  <h2>API Guides</h2>
+                  <IconMap
+                    size={4}
+                    title="Icon for other card"
+                    className="palette-color-grayscale"
+                  />
+                </CardHeader>
+
+                <CardBody>
+                  <p>View guides on how to use CAMD's API.</p>
+                </CardBody>
+
+                <CardFooter>
+                  <RouterLink to="/api-guides">API Guides</RouterLink>
+                </CardFooter>
+              </Card> */}
+
+              <Card gridLayout={{ tablet: { col: 4 } }}>
+                <CardHeader align="center">
+                  <h2>Contact Us</h2>
+                  <IconAlternateEmail
+                    size={4}
+                    title="Icon for other card"
+                    className="palette-color-grayscale"
+                  />
+                </CardHeader>
+
+                <CardBody>
+                  <p>Reach out to CAMD for further questions.</p>
+                </CardBody>
+
+                <CardFooter>
+                  <a
+                    href="https://www.epa.gov/airmarkets/forms/cam-api-contact-us"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Contact Us
+                  </a>
+                </CardFooter>
+              </Card>
+            </CardGroup>
+          </aside>
         </Grid>
       </Grid>
     </GridContainer>
