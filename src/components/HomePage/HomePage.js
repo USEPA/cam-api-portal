@@ -5,18 +5,15 @@ import { HomePageCards } from "../HomePageCards/HomePageCards";
 
 export const HomePage = () => {
   return (
-    <main>
-      <GridContainer>
-        <Grid row>
-          <Grid>
-            <About />
-          </Grid>
-
-          <Grid row className="padding-2">
-            <HomePageCards />
-          </Grid>
+    <GridContainer>
+      <Grid row>
+        <Grid>
+          <About />
         </Grid>
-      </GridContainer>
-    </main>
+        <Grid row className="padding-2">
+          <HomePageCards />
+        </Grid>
+      </Grid>
+    </GridContainer>
   );
 };

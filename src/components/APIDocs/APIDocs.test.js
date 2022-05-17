@@ -13,7 +13,20 @@ describe("test the APIDocs page", () => {
         <APIDocs />
       </MemoryRouter>
     );
-    const textElement = screen.getByText(/APIDocs/i);
+    const textElement = screen.getByText(/API Documentation/i);
     expect(textElement).toBeInTheDocument();
+  });
+
+  expect.extend(toHaveNoViolations);
+
+  test("should pass axe accessibility tests", async () => {
+    const { container } = render(
+      <MemoryRouter>
+        <APIDocs />
+      </MemoryRouter>
+    );
+    const results = await axe(container);
+
+    expect(results).toHaveNoViolations();
   });
 });

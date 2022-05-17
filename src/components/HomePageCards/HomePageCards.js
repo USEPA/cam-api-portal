@@ -14,7 +14,7 @@ import {
 
 export const HomePageCards = () => {
   return (
-    <aside>
+    <section>
       <CardGroup>
         <Card gridLayout={{ tablet: { col: 6 } }}>
           <CardHeader>
@@ -53,6 +53,6 @@ export const HomePageCards = () => {
           </CardFooter>
         </Card>
       </CardGroup>
-    </aside>
+    </section>
   );
 };
