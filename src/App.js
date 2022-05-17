@@ -5,6 +5,7 @@ import { HomePage } from "./components/HomePage/HomePage";
 import { NotFoundPage } from "./components/NotFoundPage/NotFoundPage";
 import { APIDocs } from "./components/APIDocs/APIDocs";
 import { HelpResources } from "./components/HelpResources/HelpResources";
+import { ReleaseNotes } from "./components/ReleaseNotes/ReleaseNotes";
 import "./App.css";
 import "uswds/dist/css/uswds.css";
 import "@trussworks/react-uswds/lib/index.css";
@@ -18,6 +19,7 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/documentation" element={<APIDocs />} />
           <Route path="/help-resources" element={<HelpResources />} />
+          <Route path="/release-notes" element={<ReleaseNotes />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
