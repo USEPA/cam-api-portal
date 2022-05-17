@@ -10,7 +10,7 @@ export const HomePage = () => {
         <Grid>
           <About />
         </Grid>
-        <Grid row className="padding-2">
+        <Grid row className="padding-3">
           <HomePageCards />
         </Grid>
       </Grid>
