@@ -1,56 +1,56 @@
 {
-    "name": "cam-api-portal",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "@testing-library/jest-dom": "^5.14.1",
-        "@testing-library/react": "^11.2.7",
-        "@testing-library/user-event": "^12.8.3",
-        "@trussworks/react-uswds": "^2.7.0",
-        "@us-epa-camd/easey-design-system": "^1.27.0",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
-        "react-router-dom": "^6.2.1",
-        "react-scripts": "4.0.3",
-        "swagger-ui-react": "^4.10.3",
-        "uswds": "^2.11.2",
-        "web-vitals": "^1.1.2"
-    },
-    "lint-staged": {
-        "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-            "prettier --write"
-        ]
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!swagger-ui-react)/\" --watchAll=false",
-        "test:watch": "react-scripts test",
-        "eject": "react-scripts eject",
-        "prepare": "husky install"
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
-    "devDependencies": {
-        "husky": "^7.0.4",
-        "jest-axe": "^5.0.1",
-        "lint-staged": "^12.1.5",
-        "prettier": "^2.5.1"
-    }
+  "name": "cam-api-portal",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@trussworks/react-uswds": "^2.7.0",
+    "@us-epa-camd/easey-design-system": "^1.27.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "4.0.3",
+    "swagger-ui-react": "^4.10.3",
+    "uswds": "^2.11.2",
+    "web-vitals": "^1.1.2"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!swagger-ui-react)/\" --watchAll=false",
+    "test:watch": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prepare": "husky install"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "jest-axe": "^5.0.1",
+    "lint-staged": "^12.1.5",
+    "prettier": "^2.5.1"
+  }
 }
