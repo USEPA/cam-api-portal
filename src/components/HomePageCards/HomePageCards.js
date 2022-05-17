@@ -27,7 +27,9 @@ export const HomePageCards = () => {
           </CardBody>
 
           <CardFooter>
-            <RouterLink to="/documentation">Documentation</RouterLink>
+            <RouterLink to="/documentation" target={"_blank"}>
+              Documentation
+            </RouterLink>
           </CardFooter>
         </Card>
 
@@ -49,7 +51,9 @@ export const HomePageCards = () => {
           </CardBody>
 
           <CardFooter>
-            <RouterLink to="/help-resources">Overview</RouterLink>
+            <RouterLink to="/help-resources" target={"_blank"}>
+              Overview
+            </RouterLink>
           </CardFooter>
         </Card>
       </CardGroup>
