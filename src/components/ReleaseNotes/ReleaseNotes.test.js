@@ -1,18 +1,32 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { ReleaseNotes } from "./ReleaseNotes";
+import { MemoryRouter } from "react-router-dom";
 import { axe, toHaveNoViolations } from "jest-axe";
+import { ReleaseNotes } from "./ReleaseNotes";
 
-test("renders the Release Notes page", () => {
-  render(<ReleaseNotes />);
-  expect(screen.getByText(/Release Notes/i)).toBeInTheDocument();
-});
+jest.setTimeout(30000);
 
-expect.extend(toHaveNoViolations);
+describe("test the Release Notes page", () => {
+  it("renders the main content", () => {
+    render(
+      <MemoryRouter>
+        <ReleaseNotes />
+      </MemoryRouter>
+    );
+    const textElement = screen.getByText(/Release Notes/i);
+    expect(textElement).toBeInTheDocument();
+  });
 
-it("should pass axe accessibility tests", async () => {
-  const { container } = render(<ReleaseNotes />);
-  const results = await axe(container);
+  expect.extend(toHaveNoViolations);
 
-  expect(results).toHaveNoViolations();
+  test("should pass axe accessibility tests", async () => {
+    const { container } = render(
+      <MemoryRouter>
+        <ReleaseNotes />
+      </MemoryRouter>
+    );
+    const results = await axe(container);
+
+    expect(results).toHaveNoViolations();
+  });
 });

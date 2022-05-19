@@ -86,7 +86,7 @@ export const HelpResources = () => {
                 </CardBody>
 
                 <CardFooter>
-                  <RouterLink to="/faq">FAQ</RouterLink>
+                  <RouterLink to="/faq">FAQs</RouterLink>
                 </CardFooter>
               </Card>
 

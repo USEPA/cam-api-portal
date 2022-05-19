@@ -13,7 +13,9 @@ describe("test the Help & Resources page", () => {
         <HelpResources />
       </MemoryRouter>
     );
-    const textElement = screen.getByText(/What to find/i);
+    const textElement = screen.getByText(
+      /What to find in Help & Resources sections/i
+    );
     expect(textElement).toBeInTheDocument();
   });
 });

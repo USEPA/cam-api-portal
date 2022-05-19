@@ -2,27 +2,39 @@ import React from "react";
 
 import { Button, GridContainer, Grid } from "@trussworks/react-uswds";
 import { APIKeyModal } from "../APIKeyModal/APIKeyModal";
-import { WhatIsNewBox } from "@us-epa-camd/easey-design-system";
+import { Alert } from "@trussworks/react-uswds";
 
 export const About = () => {
   return (
     <GridContainer>
+      <Alert
+        type="info"
+        align="left"
+        heading="Informative status"
+        headingLevel="h4"
+      >
+        This is the first iteration of the CAM API portal, click{" "}
+        <a
+          href="https://www.epa.gov/airmarkets/forms/cam-api-contact-us"
+          target="_blank"
+          rel="noreferrer"
+        >
+          here
+        </a>{" "}
+        to add feedback.
+      </Alert>
       <Grid row gap>
-        <Grid desktop={{ col: 8 }} className="text-left">
+        <Grid desktop={{ col: true }} className="text-left">
           <h1>About CAM API</h1>
           <p>
-            These REST APIs provide access to a variety of data the Clean Air
-            Markets Division (CAMD) collects to run programs designed to reduce
-            air pollution from power plants.&nbsp; Developers can use these APIs
-            to build applications or create analyses using a variety of
-            platforms.
+            These Representational State Transfer (REST) APIs provide access to
+            a variety of data the Clean Air Markets Division (CAMD) collects to
+            run programs designed to reduce air pollution from power
+            plants.&nbsp; Developers can use these APIs to build applications or
+            create analyses using a variety of platforms.
           </p>
 
           <APIKeyModal />
-        </Grid>
-
-        <Grid desktop={{ col: 4 }} className="padding-y-1 padding-x-1">
-          <WhatIsNewBox title="What's New" text="Lorem ipsum dolor sit amet" />
         </Grid>
       </Grid>
 
