@@ -25,7 +25,7 @@ export const HelpResources = () => {
           <p>What to find in Help & Resources sections</p>
         </Grid>
         <Grid row className="padding-2">
-          <aside>
+          <article>
             <CardGroup>
               <Card gridLayout={{ tablet: { col: 4 } }}>
                 <CardHeader>
@@ -126,7 +126,7 @@ export const HelpResources = () => {
                 </CardFooter>
               </Card>
             </CardGroup>
-          </aside>
+          </article>
         </Grid>
       </Grid>
     </GridContainer>
