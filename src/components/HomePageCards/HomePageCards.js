@@ -31,7 +31,7 @@ export const HomePageCards = () => {
           </CardFooter>
         </Card>
 
-        <Card gridLayout={{ tablet: { col: 6 } }}>
+        <Card gridLayout={{ tablet: { col: 6 } }} align="center">
           <CardHeader align="center">
             <h2>Help & Resources</h2>
             <IconInfo
