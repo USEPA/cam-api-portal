@@ -20,15 +20,15 @@ export const HelpResources = () => {
   return (
     <GridContainer>
       <Grid row gap>
-        <Grid desktop={{ col: 8 }} className="text-left">
+        <Grid desktop={{ col: true }} className="text-left">
           <h1>Help & Resources</h1>
           <p>What to find in Help & Resources sections</p>
         </Grid>
         <Grid row className="padding-2">
           <aside>
             <CardGroup>
-              <Card gridLayout={{ tablet: { col: 4 } }}>
-                <CardHeader align="center">
+              <Card gridLayout={{ tablet: { col: 4 } }} align="center">
+                <CardHeader>
                   <h2>API Guides</h2>
                   <IconMap
                     size={4}
@@ -42,12 +42,14 @@ export const HelpResources = () => {
                 </CardBody>
 
                 <CardFooter>
-                  <RouterLink to="/api-guides">API Guides</RouterLink>
+                  <RouterLink to="/api-guides" target={"_blank"}>
+                    API Guides
+                  </RouterLink>
                 </CardFooter>
               </Card>
 
-              <Card gridLayout={{ tablet: { col: 4 } }}>
-                <CardHeader align="center">
+              <Card gridLayout={{ tablet: { col: 4 } }} align="center">
+                <CardHeader>
                   <h2>Contact Us</h2>
                   <IconAlternateEmail
                     size={4}
@@ -71,8 +73,8 @@ export const HelpResources = () => {
                 </CardFooter>
               </Card>
 
-              <Card gridLayout={{ tablet: { col: 4 } }}>
-                <CardHeader align="center">
+              <Card gridLayout={{ tablet: { col: 4 } }} align="center">
+                <CardHeader>
                   <h2>FAQs</h2>
                   <IconHelpOutline
                     size={4}
@@ -86,11 +88,13 @@ export const HelpResources = () => {
                 </CardBody>
 
                 <CardFooter>
-                  <RouterLink to="/faq">FAQs</RouterLink>
+                  <RouterLink to="/faq" target={"_blank"}>
+                    FAQs
+                  </RouterLink>
                 </CardFooter>
               </Card>
 
-              <Card gridLayout={{ tablet: { col: 4 } }}>
+              <Card gridLayout={{ tablet: { col: 4 } }} align="center">
                 <CardHeader>
                   <h2>Related Resources</h2>
                   <IconReduceCapacity size={4} title="Icon for API Docs" />
@@ -101,14 +105,14 @@ export const HelpResources = () => {
                 </CardBody>
 
                 <CardFooter>
-                  <RouterLink to="/related-resources">
+                  <RouterLink to="/related-resources" target={"_blank"}>
                     Related Resources
                   </RouterLink>
                 </CardFooter>
               </Card>
 
-              <Card gridLayout={{ tablet: { col: 4 } }}>
-                <CardHeader align="center">
+              <Card gridLayout={{ tablet: { col: 4 } }} align="center">
+                <CardHeader>
                   <h2>Release Notes</h2>
                   <IconFlag
                     size={4}
@@ -122,7 +126,9 @@ export const HelpResources = () => {
                 </CardBody>
 
                 <CardFooter>
-                  <RouterLink to="/release-notes">Release Notes</RouterLink>
+                  <RouterLink to="/release-notes" target={"_blank"}>
+                    Release Notes
+                  </RouterLink>
                 </CardFooter>
               </Card>
             </CardGroup>

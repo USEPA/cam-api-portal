@@ -50,9 +50,7 @@ export const About = () => {
 
           <Button
             className="usa-button"
-            onClick={() =>
-              window.open("https://campd-dev.app.cloud.gov/", "_blank")
-            }
+            onClick={() => window.open("https://campd.epa.gov/", "_blank")}
           >
             CAMPD Application
           </Button>
