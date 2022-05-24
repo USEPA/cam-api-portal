@@ -13,9 +13,7 @@ describe("test the FAQ page", () => {
         <FAQ />
       </MemoryRouter>
     );
-    const textElement = screen.getByText(
-      /Frequently asked questions subheader./i
-    );
+    const textElement = screen.getByText(/ questions /i);
     expect(textElement).toBeInTheDocument();
   });
 });

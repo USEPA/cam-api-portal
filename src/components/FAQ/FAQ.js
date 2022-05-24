@@ -7,7 +7,17 @@ export const FAQ = () => {
       <Grid row gap>
         <Grid desktop={{ col: 8 }} className="text-left">
           <h1>Frequently Asked Questions</h1>
-          <p>Frequently asked questions subheader.</p>
+          <p>
+            Use the{" "}
+            <a
+              href="https://www.epa.gov/airmarkets/forms/cam-api-contact-us"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Contact Us
+            </a>{" "}
+            page to ask questions about the CAM API!
+          </p>
         </Grid>
       </Grid>
 
