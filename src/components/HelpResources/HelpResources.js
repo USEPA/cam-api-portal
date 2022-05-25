@@ -22,7 +22,12 @@ export const HelpResources = () => {
       <Grid row gap>
         <Grid desktop={{ col: 8 }} className="text-left">
           <h1>Help & Resources</h1>
-          <p>What to find in Help & Resources sections</p>
+          <p>
+            The Clean Air Markets APIs provide a large amount of detailed power
+            sector emissions data. Below are some resources that can be used to
+            help understand these data as well as using the API endpoints to
+            obtain them.
+          </p>
         </Grid>
         <Grid row className="padding-2">
           <article>
