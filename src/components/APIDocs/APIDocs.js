@@ -19,7 +19,7 @@ export const APIDocs = () => {
     <article>
       <GridContainer>
         <Grid row gap>
-          <Grid desktop={{ col: 8 }} className="text-left">
+          <Grid desktop={{ col: 12 }} className="text-left">
             <h1>API Documentation</h1>
             <p>
               Explore the following CAM API Swagger docs for endpoints that
