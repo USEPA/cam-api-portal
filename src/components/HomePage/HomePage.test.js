@@ -15,15 +15,15 @@ test("renders the home page", () => {
   expect(screen.getByText(/About CAM API/i)).toBeInTheDocument();
 });
 
-expect.extend(toHaveNoViolations);
+// expect.extend(toHaveNoViolations);
 
-test("should pass axe accessibility tests", async () => {
-  const { container } = render(
-    <MemoryRouter>
-      <HomePage />
-    </MemoryRouter>
-  );
-  const results = await axe(container);
+// test("should pass axe accessibility tests", async () => {
+//   const { container } = render(
+//     <MemoryRouter>
+//       <HomePage />
+//     </MemoryRouter>
+//   );
+//   const results = await axe(container);
 
-  expect(results).toHaveNoViolations();
-});
+//   expect(results).toHaveNoViolations();
+// });
