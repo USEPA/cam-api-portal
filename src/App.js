@@ -5,6 +5,7 @@ import { HomePage } from "./components/HomePage/HomePage";
 import { NotFoundPage } from "./components/NotFoundPage/NotFoundPage";
 import { APIDocs } from "./components/APIDocs/APIDocs";
 import { HelpResources } from "./components/HelpResources/HelpResources";
+import { FAQ } from "./components/FAQ/FAQ";
 import "./App.css";
 import "uswds/dist/css/uswds.css";
 import "@trussworks/react-uswds/lib/index.css";
@@ -20,6 +21,7 @@ function App() {
           <Route path="/documentation" element={<APIDocs />} />
           <Route path="/swagger/:endpoint" element={<SwaggerPage />} />
           <Route path="/help-resources" element={<HelpResources />} />
+          <Route path="/faq" element={<FAQ />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
