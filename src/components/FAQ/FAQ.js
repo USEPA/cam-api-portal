@@ -5,18 +5,19 @@ export const FAQ = () => {
   return (
     <GridContainer>
       <Grid row gap>
-        <Grid desktop={{ col: 8 }} className="text-left">
+        <Grid desktop={{ col: 12 }} className="text-left">
           <h1>Frequently Asked Questions</h1>
           <p>
-            Use the{" "}
+            There are currently no FAQs, but they will be added as questions are
+            submitted. Please visit the{" "}
             <a
               href="https://www.epa.gov/airmarkets/forms/cam-api-contact-us"
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
             >
               Contact Us
             </a>{" "}
-            page to ask questions about the CAM API!
+            page to ask questions about the CAM API.
           </p>
         </Grid>
       </Grid>
