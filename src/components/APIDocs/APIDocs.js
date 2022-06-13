@@ -10,11 +10,8 @@ import {
 } from "@trussworks/react-uswds";
 import React from "react";
 import { constants } from "../../helpers/constants";
-import { useNavigate } from "react-router-dom";
 
 export const APIDocs = () => {
-  const navigate = useNavigate();
-
   return (
     <article>
       <GridContainer>
