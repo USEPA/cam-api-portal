@@ -12,7 +12,7 @@ export const About = () => {
         <a
           href="https://www.epa.gov/airmarkets/forms/cam-api-contact-us"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           here
         </a>{" "}
@@ -43,14 +43,13 @@ export const About = () => {
             market-based trading programs.
           </p>
 
-          <Button
-            className="usa-button"
-            onClick={() =>
-              window.open("https://campd-dev.app.cloud.gov/", "_blank")
-            }
+          <a
+            href="https://campd.epa.gov"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            CAMPD Application
-          </Button>
+            <Button className="usa-button">CAMPD Application</Button>
+          </a>
         </Grid>
 
         <Grid desktop={{ col: true }} className="text-left">
@@ -63,14 +62,13 @@ export const About = () => {
             being used for testing purposes.
           </p>
 
-          <Button
-            className="usa-button"
-            onClick={() =>
-              window.open("https://easey-beta.app.cloud.gov/ecmps/", "_blank")
-            }
+          <a
+            href="https://easey-beta.app.cloud.gov/ecmps"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            ECMPS 2.0 Application
-          </Button>
+            <Button className="usa-button">ECMPS 2.0 Application</Button>
+          </a>
         </Grid>
       </Grid>
     </GridContainer>
