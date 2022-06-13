@@ -44,12 +44,11 @@ export const APIDocs = () => {
                     <p>{page.description}</p>
                   </CardBody>
                   <CardFooter>
-                    <Button
-                      type="button"
-                      onClick={() => navigate(`/swagger/${page.name}`)}
-                    >
-                      Go to docs
-                    </Button>
+                    <a href={`/swagger/${page.name}`} rel="noopener noreferrer">
+                      <Button class="usa-button" type="button">
+                        Go to docs
+                      </Button>
+                    </a>
                   </CardFooter>
                 </Card>
               );
