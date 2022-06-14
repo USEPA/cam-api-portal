@@ -2,24 +2,12 @@ import React from "react";
 
 import { Button, GridContainer, Grid } from "@trussworks/react-uswds";
 import { APIKeyModal } from "../APIKeyModal/APIKeyModal";
-import { Alert } from "@trussworks/react-uswds";
 
 export const About = () => {
   return (
     <GridContainer>
-      <Alert type="info" heading="Informative status" headingLevel="h4">
-        This is the first iteration of the CAM API portal, click{" "}
-        <a
-          href="https://www.epa.gov/airmarkets/forms/cam-api-contact-us"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          here
-        </a>{" "}
-        to add feedback.
-      </Alert>
       <Grid row gap>
-        <Grid desktop={{ col: 8 }} className="text-left">
+        <Grid desktop={{ col: true }} className="text-left">
           <h1>About CAM API</h1>
           <p>
             These REST APIs provide access to a variety of data the Clean Air
