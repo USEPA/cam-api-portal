@@ -6,9 +6,11 @@ import { NotFoundPage } from "./components/NotFoundPage/NotFoundPage";
 import { APIDocs } from "./components/APIDocs/APIDocs";
 import { HelpResources } from "./components/HelpResources/HelpResources";
 import { ReleaseNotes } from "./components/ReleaseNotes/ReleaseNotes";
+import { FAQ } from "./components/FAQ/FAQ";
 import "./App.css";
 import "uswds/dist/css/uswds.css";
 import "@trussworks/react-uswds/lib/index.css";
+import { SwaggerPage } from "./components/SwaggerPage/SwaggerPage";
 
 function App() {
   return (
@@ -18,8 +20,10 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/documentation" element={<APIDocs />} />
+          <Route path="/swagger/:endpoint" element={<SwaggerPage />} />
           <Route path="/help-resources" element={<HelpResources />} />
           <Route path="/release-notes" element={<ReleaseNotes />} />
+          <Route path="/faq" element={<FAQ />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

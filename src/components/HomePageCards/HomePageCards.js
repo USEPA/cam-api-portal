@@ -14,7 +14,7 @@ import {
 
 export const HomePageCards = () => {
   return (
-    <aside>
+    <section>
       <CardGroup>
         <Card gridLayout={{ tablet: { col: 6 } }} align="center">
           <CardHeader align="center">
@@ -27,9 +27,7 @@ export const HomePageCards = () => {
           </CardBody>
 
           <CardFooter>
-            <RouterLink to="/documentation" target={"_blank"}>
-              Documentation
-            </RouterLink>
+            <RouterLink to="/documentation">Documentation</RouterLink>
           </CardFooter>
         </Card>
 
@@ -51,12 +49,10 @@ export const HomePageCards = () => {
           </CardBody>
 
           <CardFooter>
-            <RouterLink to="/help-resources" target={"_blank"}>
-              Overview
-            </RouterLink>
+            <RouterLink to="/help-resources">Overview</RouterLink>
           </CardFooter>
         </Card>
       </CardGroup>
-    </aside>
+    </section>
   );
 };

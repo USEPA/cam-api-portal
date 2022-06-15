@@ -1,19 +1,19 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import { HelpResources } from "./HelpResources";
+import { FAQ } from "./FAQ";
 import { axe, toHaveNoViolations } from "jest-axe";
 
 jest.setTimeout(30000);
 
-describe("test the Help & Resources page", () => {
+describe("test the FAQ page", () => {
   it("renders the main content", () => {
     render(
       <MemoryRouter>
-        <HelpResources />
+        <FAQ />
       </MemoryRouter>
     );
-    const textElement = screen.getByText(/provide a large amount/i);
+    const textElement = screen.getByText(/ questions /i);
     expect(textElement).toBeInTheDocument();
   });
 });
@@ -23,7 +23,7 @@ expect.extend(toHaveNoViolations);
 it("should pass axe accessibility tests", async () => {
   const { container } = render(
     <MemoryRouter>
-      <HelpResources />
+      <FAQ />
     </MemoryRouter>
   );
   const results = await axe(container);

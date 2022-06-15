@@ -40,7 +40,7 @@ export const ReleaseNotes = () => {
                     <p>{page.description}</p>
                   </CardBody>
                   <CardFooter>
-                    <p className="card-text">
+                    <div className="card-text">
                       <ul className="usa-list usa-list--unstyled">
                         <li>
                           <strong>Version: {page.version} </strong>
@@ -49,7 +49,7 @@ export const ReleaseNotes = () => {
                           <strong>Published date: {page.publish} </strong>
                         </li>
                       </ul>
-                    </p>
+                    </div>
                   </CardFooter>
                 </Card>
               );
