@@ -12,7 +12,6 @@ import {
   IconReduceCapacity,
   IconFlag,
   // IconMap,
-  IconAlternateEmail,
   CardGroup,
 } from "@trussworks/react-uswds";
 
