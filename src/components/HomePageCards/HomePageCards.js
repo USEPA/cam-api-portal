@@ -8,7 +8,7 @@ import {
   CardBody,
   CardFooter,
   IconContentCopy,
-  IconInfoOutline,
+  IconInfo,
   CardGroup,
 } from "@trussworks/react-uswds";
 
@@ -17,7 +17,7 @@ export const HomePageCards = () => {
     <section>
       <CardGroup>
         <Card gridLayout={{ tablet: { col: 6 } }} align="center">
-          <CardHeader>
+          <CardHeader align="center">
             <h2>API Documentation</h2>
             <IconContentCopy size={4} title="Icon for API Docs" />
           </CardHeader>
@@ -34,7 +34,7 @@ export const HomePageCards = () => {
         <Card gridLayout={{ tablet: { col: 6 } }} align="center">
           <CardHeader align="center">
             <h2>Help & Resources</h2>
-            <IconInfoOutline
+            <IconInfo
               size={4}
               title="Icon for other card"
               className="palette-color-grayscale"
