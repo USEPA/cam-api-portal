@@ -11,7 +11,8 @@ export const About = () => {
         type="info"
         align="left"
         heading="Informative status"
-        headingLevel="h4"
+        // headingLevel prop is from a newer version of @trussworks/react-uswds
+        //headingLevel="h4"
       >
         This is the first iteration of the CAM API portal, click{" "}
         <a
