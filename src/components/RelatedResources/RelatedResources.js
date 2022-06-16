@@ -6,8 +6,8 @@ import {
   CardHeader,
   CardBody,
   CardFooter,
-  IconCloud,
-  IconApi,
+  IconAssessment,
+  IconInsights,
   CardGroup,
 } from "@trussworks/react-uswds";
 
@@ -17,12 +17,18 @@ export const RelatedResources = () => {
       <GridContainer>
         <Grid row gap>
           <Grid desktop={{ col: 12 }} className="text-left">
-            <h1 align="center">Related Resources</h1>
-
+            <h1>Related Resources</h1>
+            <p>
+              {" "}
+              Resources about the data and programs related to CAMPD and ECMPS,
+              APIs and Swagger documentations.
+            </p>
+          </Grid>
+          <Grid row className="padding-2">
             <CardGroup>
               <Card gridLayout={{ tablet: { col: 6 } }}>
                 <CardHeader align="center">
-                  <IconCloud
+                  <IconAssessment
                     size={4}
                     title="Icon for other card"
                     className="palette-color-grayscale"
@@ -35,9 +41,6 @@ export const RelatedResources = () => {
                     and ECMPS can be found in the Clean Air Markets resources
                     below:
                   </p>
-                </CardBody>
-
-                <CardFooter align="left">
                   <ul>
                     <li>
                       <p>
@@ -56,6 +59,32 @@ export const RelatedResources = () => {
                       <p>
                         {" "}
                         <a
+                          href="https://www.epa.gov/airmarkets/power-sector-emissions-data"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        >
+                          {" "}
+                          Power Sector Emissions Data
+                        </a>{" "}
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        {" "}
+                        <a
+                          href="https://www.epa.gov/airmarkets/summary-data"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        >
+                          {" "}
+                          Summary Data
+                        </a>{" "}
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        {" "}
+                        <a
                           href="https://www.epa.gov/airmarkets/frequent-questions-about-camd-re-engineering-effort"
                           target="_blank"
                           rel="noreferrer noopener"
@@ -67,11 +96,13 @@ export const RelatedResources = () => {
                       </p>
                     </li>
                   </ul>
-                </CardFooter>
+                </CardBody>
+
+                <CardFooter></CardFooter>
               </Card>
               <Card gridLayout={{ tablet: { col: 6 } }}>
                 <CardHeader align="center">
-                  <IconApi
+                  <IconInsights
                     size={4}
                     title="Icon for other card"
                     className="palette-color-grayscale"
@@ -83,9 +114,6 @@ export const RelatedResources = () => {
                     For resources related to APIs and Swagger documentation see
                     the following websites:
                   </p>
-                </CardBody>
-
-                <CardFooter align="left">
                   <ul>
                     <li>
                       <p>
@@ -140,7 +168,9 @@ export const RelatedResources = () => {
                       </p>
                     </li>
                   </ul>
-                </CardFooter>
+                </CardBody>
+
+                <CardFooter></CardFooter>
               </Card>
             </CardGroup>
           </Grid>
