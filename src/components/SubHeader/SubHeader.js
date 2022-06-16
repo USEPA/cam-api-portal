@@ -6,39 +6,21 @@ import {
   PrimaryNav,
   NavDropDownButton,
   Title,
+  NavMenuButton,
   Link,
   Link as USWDSLink,
 } from "@trussworks/react-uswds";
 import { APIKeyModal } from "../APIKeyModal/APIKeyModal";
+import { Link as RouterLink } from "react-router-dom";
 
 export const SubHeader = ({ setCurrentLink }) => {
   const subHeaderMenuList = [
     {
-      label: (
-        <span
-          className="margin-right-1 text-no-wrap"
-          style={{ color: "white" }}
-        >
-          Home
-        </span>
-      ),
+      label: "Home",
       items: [{ menu: "Home", link: `/home`, tab: true }],
     },
     {
-      label: (
-        <span
-          className="margin-right-1 text-no-wrap"
-          style={{ color: "white" }}
-        >
-          <span
-            className="margin-right-20 menu-item-separator"
-            style={{ color: "#365b8f" }}
-          >
-            |
-          </span>
-          API Documentations
-        </span>
-      ),
+      label: "API Documentation",
       items: [
         { menu: "Account API", link: `/swagger/account-mgmt`, tab: true },
         { menu: "Facilities API", link: `/swagger/facilities-mgmt`, tab: true },
@@ -56,20 +38,7 @@ export const SubHeader = ({ setCurrentLink }) => {
       ],
     },
     {
-      label: (
-        <span
-          className="margin-right-1 text-no-wrap"
-          style={{ color: "white" }}
-        >
-          <span
-            className="margin-right-20 menu-item-separator"
-            style={{ color: "#365b8f" }}
-          >
-            |
-          </span>
-          Help & Resources
-        </span>
-      ),
+      label: "Help & Resources",
       items: [
         { menu: "API Guides", link: `/api-guides`, tab: true },
         { menu: "FAQs", link: `/faq`, tab: true },
@@ -78,20 +47,7 @@ export const SubHeader = ({ setCurrentLink }) => {
       ],
     },
     {
-      label: (
-        <span
-          className="margin-right-1 text-no-wrap"
-          style={{ color: "white" }}
-        >
-          <span
-            className="margin-right-20 menu-item-separator"
-            style={{ color: "#365b8f" }}
-          >
-            |
-          </span>
-          Contact Us
-        </span>
-      ),
+      label: "Contact Us",
       items: [
         {
           menu: "Contact Us",
@@ -107,7 +63,7 @@ export const SubHeader = ({ setCurrentLink }) => {
   }, []);
 
   const [expanded, setExpanded] = useState(false);
-  const onClick = (): void => setExpanded((prvExpanded) => !prvExpanded)
+  const onClick = () => setExpanded((prvExpanded) => !prvExpanded);
 
   const [navDropdownOpen, setNavDropdownOpen] = useState([
     false,
@@ -144,7 +100,7 @@ export const SubHeader = ({ setCurrentLink }) => {
   return (
     <>
       <div className="bg-primary-dark">
-      <div className={`usa-overlay ${expanded ? 'is-visible' : ''}`}></div>
+        <div className={`usa-overlay ${expanded ? "is-visible" : ""}`}></div>
         <Header className="padding-y-2 mobile-lg:padding-x-1 desktop:padding-x-4">
           <div className="clearfix padding-x-0 desktop-lg:margin-top-3">
             <Title className="float-left margin-1 margin-top-0 desktop:margin-top-1  desktop-lg:margin-top-0 ">
@@ -156,7 +112,8 @@ export const SubHeader = ({ setCurrentLink }) => {
               <PrimaryNav
                 className="float-left desktop:margin-top-1 desktop-lg:margin-top-0"
                 items={subHeaderMenuList.map((el, i) => {
-                  if (el.items.length === 0) {
+                  if (el.items.length === 1) {
+                    // if there is only one item in the menu list , the 1st if; else other.
                     return (
                       <>
                         <Link
@@ -165,6 +122,7 @@ export const SubHeader = ({ setCurrentLink }) => {
                           title={el.label}
                           aria-label={el.label}
                           onClick={() => handleSubMenuClick(i)}
+                          style={{ color: "white" }}
                         >
                           {el.label}
                         </Link>
@@ -184,7 +142,7 @@ export const SubHeader = ({ setCurrentLink }) => {
                           onToggle={() => {
                             handleToggleNavDropdown(i);
                           }}
-                          className="text-white"
+                          style={{ color: "black" }}
                         />
                         <Menu
                           id={
@@ -192,21 +150,23 @@ export const SubHeader = ({ setCurrentLink }) => {
                               ? `extended-nav-section-last`
                               : null
                           }
-                          className="font-body-sm"
                           items={el.items.map((item) =>
                             item.tab ? (
                               <USWDSLink
                                 href={item.link}
                                 rel={item.link}
-                                target="_blank"
+                                // target="_blank" I don't think this is needed, the App links do need to open in a new tab
                               >
                                 {item.menu}
                               </USWDSLink>
                             ) : (
-                              <Link to={item.link}>{item.menu}</Link>
+                              <RouterLink to={item.link}>
+                                {item.menu}
+                              </RouterLink>
                             )
                           )}
                           isOpen={navDropdownOpen[i]}
+                          style={{ color: "black" }}
                         />
                         {categorySelected[i] === true ? (
                           <div className="menu-underline" />
@@ -217,9 +177,11 @@ export const SubHeader = ({ setCurrentLink }) => {
                 })}
                 mobileExpanded={expanded}
                 onToggleMobileNav={onClick}
-              />
-                <div className="float-right desktop:margin-top-1 desktop-lg:margin-top-0">
-                <APIKeyModal />{" "}
+              >
+                <APIKeyModal />
+              </PrimaryNav>
+              <div className="float-right desktop:margin-top-1 desktop-lg:margin-top-0">
+                <NavMenuButton onClick={onClick} label="Menu" />
               </div>
             </div>
           </div>
