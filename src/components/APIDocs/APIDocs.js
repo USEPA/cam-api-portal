@@ -37,7 +37,7 @@ export const APIDocs = () => {
                       {page.title}
                     </h2>
                   </CardHeader>
-                  <CardBody>
+                  <CardBody align="center">
                     <p>{page.description}</p>
                   </CardBody>
                   <CardFooter align="center">

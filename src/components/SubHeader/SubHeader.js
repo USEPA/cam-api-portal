@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import {
   Menu,
   Header,
@@ -9,31 +8,17 @@ import {
   Title,
   Link as USWDSLink,
 } from "@trussworks/react-uswds";
-import { Link } from "react-router-dom";
 import { APIKeyModal } from "../APIKeyModal/APIKeyModal";
+import { Link as RouterLink } from "react-router-dom";
 
 export const SubHeader = ({ setCurrentLink }) => {
   const subHeaderMenuList = [
     {
-      label: (
-        <span
-          className="margin-right-1 text-no-wrap"
-          style={{ color: "#686868" }}
-        >
-          Home
-        </span>
-      ),
-      items: [{ menu: "Home", link: `/home`, tab: true }],
+      label: "Home",
+      items: [{ menu: "Home", link: `/`, tab: true }],
     },
     {
-      label: (
-        <span
-          className="margin-right-1 text-no-wrap"
-          style={{ color: "#686868" }}
-        >
-          API Documentations
-        </span>
-      ),
+      label: "API Documentation",
       items: [
         { menu: "Account API", link: `/swagger/account-mgmt`, tab: true },
         { menu: "Facilities API", link: `/swagger/facilities-mgmt`, tab: true },
@@ -51,14 +36,7 @@ export const SubHeader = ({ setCurrentLink }) => {
       ],
     },
     {
-      label: (
-        <span
-          className="margin-right-1 text-no-wrap"
-          style={{ color: "#686868" }}
-        >
-          Help & Resources
-        </span>
-      ),
+      label: "Help & Resources",
       items: [
         { menu: "API Guides", link: `/api-guides`, tab: true },
         { menu: "FAQs", link: `/faq`, tab: true },
@@ -67,14 +45,7 @@ export const SubHeader = ({ setCurrentLink }) => {
       ],
     },
     {
-      label: (
-        <span
-          className="margin-right-1 text-no-wrap"
-          style={{ color: "#686868" }}
-        >
-          Contact Us
-        </span>
-      ),
+      label: "Contact Us",
       items: [
         {
           menu: "Contact Us",
@@ -90,7 +61,7 @@ export const SubHeader = ({ setCurrentLink }) => {
   }, []);
 
   const [expanded, setExpanded] = useState(false);
-  const onClick = (): void => setExpanded((prvExpanded) => !prvExpanded);
+  const onClick = () => setExpanded((prvExpanded) => !prvExpanded);
 
   const [navDropdownOpen, setNavDropdownOpen] = useState([
     false,
@@ -126,95 +97,86 @@ export const SubHeader = ({ setCurrentLink }) => {
 
   return (
     <>
-      <div className="bg-primary-dark">
-        <div className={`usa-overlay ${expanded ? "is-visible" : ""}`}></div>
-        <Header className="padding-y-2 mobile-lg:padding-x-1 desktop:padding-x-4">
-          <div className="clearfix padding-x-0 desktop-lg:margin-top-3">
-            <Title className="float-left margin-1 margin-top-0 desktop:margin-top-1  desktop-lg:margin-top-0 ">
-              <h1 className="text-white text-bold desktop-lg:font-sans-2xl desktop:font-sans-2xl mobile-lg:font-sans-xl margin-0">
-                CAM API
-              </h1>
-            </Title>
-            <div className="float-right">
-              <PrimaryNav
-                className="float-left desktop:margin-top-1 desktop-lg:margin-top-0"
-                items={subHeaderMenuList.map((el, i) => {
-                  if (el.items.length === 0) {
-                    return (
-                      <>
-                        <Link
-                          href={el.items[0].link}
-                          target="_blank"
-                          title={el.label}
-                          aria-label={el.label}
-                          onClick={() => handleSubMenuClick(i)}
-                          style={{ color: "white" }}
-                        >
-                          {el.label}
-                        </Link>
-                        {categorySelected[i] === true ? (
-                          <div className="menu-underline" />
-                        ) : null}
-                      </>
-                    );
-                  } else {
-                    return (
-                      <>
-                        <NavDropDownButton
-                          key={i}
-                          label={el.label}
-                          menuId={`menu-${el.label}`}
-                          isOpen={navDropdownOpen[i]}
-                          onToggle={() => {
-                            handleToggleNavDropdown(i);
-                          }}
-                          style={{ color: "white" }}
-                        />
-                        <Menu
-                          id={
-                            i === subHeaderMenuList.length - 1
-                              ? `extended-nav-section-last`
-                              : null
-                          }
-                          className="font-body-sm"
-                          items={el.items.map((item) =>
-                            item.tab ? (
-                              <USWDSLink
-                                href={item.link}
-                                rel={item.link}
-                                target="_blank"
-                              >
-                                {item.menu}
-                              </USWDSLink>
-                            ) : (
-                              <Link to={item.link}>{item.menu}</Link>
-                            )
-                          )}
-                          isOpen={navDropdownOpen[i]}
-                          style={{ color: "white" }}
-                        />
-                        {categorySelected[i] === true ? (
-                          <div className="menu-underline" />
-                        ) : null}
-                      </>
-                    );
-                  }
-                })}
-                mobileExpanded={expanded}
-                onToggleMobileNav={onClick}
-              />
-              <div className="float-right desktop:margin-top-1 desktop-lg:margin-top-0">
-                <APIKeyModal />{" "}
-                <NavMenuButton
-                  aria-expanded="true"
-                  label="Menu"
-                  onClick={onClick}
-                />
-              </div>
+      <Header className="bg-primary-dark padding-y-2 mobile-lg:padding-x-1 desktop:padding-x-4">
+        <div className="clearfix padding-x-0 desktop-lg:margin-top-3">
+          <Title className="float-left margin-1 margin-top-0 desktop:margin-top-1  desktop-lg:margin-top-0 ">
+            <h1 className="text-white text-bold desktop-lg:font-sans-2xl desktop:font-sans-2xl mobile-lg:font-sans-xl margin-0">
+              CAM API
+            </h1>
+          </Title>
+          <div className="float-right">
+            <PrimaryNav
+              className="bg-primary-dark float-left desktop:margin-top-1 desktop-lg:margin-top-0"
+              items={subHeaderMenuList.map((el, i) => {
+                if (el.items.length === 0) {
+                  // if there is only one item in the menu list , the 1st if; else other.
+                  return (
+                    <>
+                      <RouterLink
+                        href={el.items[0].link}
+                        target="_blank"
+                        title={el.label}
+                        aria-label={el.label}
+                        onClick={() => handleSubMenuClick(i)}
+                      >
+                        {el.label}
+                      </RouterLink>
+                      {categorySelected[i] === true ? (
+                        <div className="menu-underline" />
+                      ) : null}
+                    </>
+                  );
+                } else {
+                  return (
+                    <>
+                      <NavDropDownButton
+                        key={i}
+                        label={el.label}
+                        menuId={`menu-${el.label}`}
+                        isOpen={navDropdownOpen[i]}
+                        onToggle={() => {
+                          handleToggleNavDropdown(i);
+                        }}
+                        style={{ color: "white" }}
+                      />
+                      <Menu
+                        id={
+                          i === subHeaderMenuList.length - 1
+                            ? `extended-nav-section-last`
+                            : null
+                        }
+                        items={el.items.map((item) =>
+                          item.tab ? (
+                            <USWDSLink
+                              href={item.link}
+                              rel={item.link}
+                              style={{ color: "white" }}
+                            >
+                              {item.menu}
+                            </USWDSLink>
+                          ) : (
+                            <RouterLink to={item.link}>{item.menu}</RouterLink>
+                          )
+                        )}
+                        isOpen={navDropdownOpen[i]}
+                      />
+                      {categorySelected[i] === true ? (
+                        <div className="menu-underline" />
+                      ) : null}
+                    </>
+                  );
+                }
+              })}
+              mobileExpanded={expanded}
+              onToggleMobileNav={onClick}
+            ></PrimaryNav>
+            <div className="float-right desktop:margin-top-1 desktop-lg:margin-top-0">
+              <APIKeyModal />
+              <NavMenuButton onClick={onClick} label="Menu" />
             </div>
           </div>
-        </Header>
-      </div>
+        </div>
+      </Header>
     </>
   );
 };
