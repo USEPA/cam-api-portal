@@ -46,11 +46,6 @@ describe("Test the About page", () => {
     expect(container.querySelector(".usa-button")).toBeInTheDocument();
   });
 
-  it("should render the Alert banner", () => {
-    render(<About />);
-    expect(screen.getByText(/Informative status/i)).toBeInTheDocument();
-  });
-
   expect.extend(toHaveNoViolations);
 
   it("should pass axe accessibility tests", async () => {

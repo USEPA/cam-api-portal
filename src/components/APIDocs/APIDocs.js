@@ -28,8 +28,12 @@ export const APIDocs = () => {
           <CardGroup>
             {constants.swaggerPages.map((page, index) => {
               return (
-                <Card gridLayout={{ desktop: { col: 6 } }} key={index}>
-                  <CardHeader align="center">
+                <Card
+                  gridLayout={{ desktop: { col: 6 } }}
+                  key={index}
+                  align="left"
+                >
+                  <CardHeader>
                     <h2
                       className="usa-card__heading"
                       aria-label={`${page.title} API documents card`}
@@ -43,7 +47,7 @@ export const APIDocs = () => {
                   <CardFooter>
                     <a href={`/swagger/${page.name}`} rel="noopener noreferrer">
                       <Button className="usa-button" type="button">
-                        Go to docs
+                        Get Started
                       </Button>
                     </a>
                   </CardFooter>

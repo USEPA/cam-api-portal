@@ -9,7 +9,7 @@ import { ReleaseNotes } from "./components/ReleaseNotes/ReleaseNotes";
 import { RelatedResources } from "./components/RelatedResources/RelatedResources";
 import { FAQ } from "./components/FAQ/FAQ";
 import "./App.css";
-import "uswds/dist/css/uswds.css";
+import "@trussworks/react-uswds/lib/uswds.css";
 import "@trussworks/react-uswds/lib/index.css";
 import { SwaggerPage } from "./components/SwaggerPage/SwaggerPage";
 
