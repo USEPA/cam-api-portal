@@ -6,15 +6,32 @@ import { APIKeyModal } from "../APIKeyModal/APIKeyModal";
 export const About = () => {
   return (
     <GridContainer>
+      <Alert
+        type="info"
+        align="left"
+        // headingLevel prop is from a newer version of @trussworks/react-uswds
+        //headingLevel="h4"
+        slim
+      >
+        This is the first iteration of the CAM API portal, click{" "}
+        <a
+          href="https://www.epa.gov/airmarkets/forms/cam-api-contact-us"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          here
+        </a>{" "}
+        to add feedback.
+      </Alert>
       <Grid row gap>
         <Grid desktop={{ col: true }} className="text-left">
           <h1>About CAM API</h1>
           <p>
-            These REST APIs provide access to a variety of data the Clean Air
-            Markets Division (CAMD) collects to run programs designed to reduce
-            air pollution from power plants.&nbsp; Developers can use these APIs
-            to build applications or create analyses using a variety of
-            platforms.
+            These Representational State Transfer (REST) APIs provide access to
+            a variety of data the Clean Air Markets Division (CAMD) collects to
+            run programs designed to reduce air pollution from power
+            plants.&nbsp; Developers can use these APIs to build applications or
+            create analyses using a variety of platforms.
           </p>
 
           <APIKeyModal />

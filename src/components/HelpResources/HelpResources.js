@@ -12,7 +12,6 @@ import {
   IconReduceCapacity,
   IconFlag,
   // IconMap,
-  IconAlternateEmail,
   CardGroup,
 } from "@trussworks/react-uswds";
 
@@ -83,10 +82,9 @@ export const HelpResources = () => {
                 </CardBody>
 
                 <CardFooter>
-                  <RouterLink to="/faq">FAQ</RouterLink>
+                  <RouterLink to="/faq">FAQs</RouterLink>
                 </CardFooter>
               </Card>
-
               {/* <Card gridLayout={{ tablet: { col: 4 } }}  align="center">
                 <CardHeader>
                   <h2>API Guides</h2>
@@ -96,20 +94,17 @@ export const HelpResources = () => {
                     className="palette-color-grayscale"
                   />
                 </CardHeader>
-
                 <CardBody>
                   <p>View guides on how to use CAMD's API.</p>
                 </CardBody>
-
                 <CardFooter>
                   <RouterLink to="/api-guides">API Guides</RouterLink>
                 </CardFooter>
               </Card> */}
-
               <Card gridLayout={{ tablet: { col: 4 } }} align="center">
                 <CardHeader>
                   <h2>Contact Us</h2>
-                  <IconAlternateEmail
+                  <IconFlag
                     size={4}
                     title="Icon for other card"
                     className="palette-color-grayscale"
