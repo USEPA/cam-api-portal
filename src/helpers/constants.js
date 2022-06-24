@@ -29,6 +29,13 @@ export const constants = {
       description:
         "Master data management API endpoints for lookup codes and data relationships",
     },
+    {
+      name: "streaming-services",
+      url: "https://api.epa.gov/easey/streaming-services/swagger-json",
+      title: "Streaming Services",
+      description:
+        "Streaming services API contains endpoints to stream account, allowance, facilities, and emissions data",
+    },
   ],
   releasePages: [
     {

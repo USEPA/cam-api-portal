@@ -1,8 +1,7 @@
 import React from "react";
 
-import { Button, GridContainer, Grid } from "@trussworks/react-uswds";
+import { Alert, Button, GridContainer, Grid } from "@trussworks/react-uswds";
 import { APIKeyModal } from "../APIKeyModal/APIKeyModal";
-import { Alert } from "@trussworks/react-uswds";
 
 export const About = () => {
   return (
@@ -10,9 +9,9 @@ export const About = () => {
       <Alert
         type="info"
         align="left"
-        heading="Informative status"
         // headingLevel prop is from a newer version of @trussworks/react-uswds
         //headingLevel="h4"
+        slim
       >
         This is the first iteration of the CAM API portal, click{" "}
         <a
@@ -22,7 +21,7 @@ export const About = () => {
         >
           here
         </a>{" "}
-        to add feedback.
+        to provide feedback.
       </Alert>
       <Grid row gap>
         <Grid desktop={{ col: true }} className="text-left">
