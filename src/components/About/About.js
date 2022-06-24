@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button, GridContainer, Grid } from "@trussworks/react-uswds";
+import { Alert, Button, GridContainer, Grid } from "@trussworks/react-uswds";
 import { APIKeyModal } from "../APIKeyModal/APIKeyModal";
 
 export const About = () => {
@@ -21,7 +21,7 @@ export const About = () => {
         >
           here
         </a>{" "}
-        to add feedback.
+        to provide feedback.
       </Alert>
       <Grid row gap>
         <Grid desktop={{ col: true }} className="text-left">
