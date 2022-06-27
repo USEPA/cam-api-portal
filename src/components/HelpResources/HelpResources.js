@@ -59,7 +59,7 @@ export const HelpResources = () => {
                 </CardHeader>
 
                 <CardBody>
-                  <p>Information on CAM API Updates.</p>
+                  <p>Information on CAM API Updates</p>
                 </CardBody>
 
                 <CardFooter>
