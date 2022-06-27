@@ -59,7 +59,7 @@ export const HelpResources = () => {
                 </CardHeader>
 
                 <CardBody>
-                  <p>Information on CAM API Updates.</p>
+                  <p>Information on CAM API Updates</p>
                 </CardBody>
 
                 <CardFooter>
@@ -78,7 +78,7 @@ export const HelpResources = () => {
                 </CardHeader>
 
                 <CardBody>
-                  <p>Frequently Asked Questions about the CAM API.</p>
+                  <p>Frequently Asked Questions about the CAM API</p>
                 </CardBody>
 
                 <CardFooter>

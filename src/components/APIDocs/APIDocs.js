@@ -47,7 +47,7 @@ export const APIDocs = () => {
                   <CardFooter>
                     <a href={`/swagger/${page.name}`} rel="noopener noreferrer">
                       <Button className="usa-button" type="button">
-                        Get Started
+                        Go to Docs
                       </Button>
                     </a>
                   </CardFooter>
