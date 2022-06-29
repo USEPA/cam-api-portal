@@ -1,10 +1,12 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import { SubHeader } from "../SubHeader/SubHeader";
 import { Alert } from "@trussworks/react-uswds";
 
 export const Layout = () => {
   return (
     <div>
+      <SubHeader />
       <main>
         <Alert
           type="info"

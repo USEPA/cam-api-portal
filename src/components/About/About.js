@@ -1,28 +1,10 @@
 import React from "react";
 
-import { Alert, Button, GridContainer, Grid } from "@trussworks/react-uswds";
-import { APIKeyModal } from "../APIKeyModal/APIKeyModal";
+import { Button, GridContainer, Grid } from "@trussworks/react-uswds";
 
 export const About = () => {
   return (
     <GridContainer>
-      <Alert
-        type="info"
-        align="left"
-        // headingLevel prop is from a newer version of @trussworks/react-uswds
-        //headingLevel="h4"
-        slim
-      >
-        This is the first iteration of the CAM API portal, click{" "}
-        <a
-          href="https://www.epa.gov/airmarkets/forms/cam-api-contact-us"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          here
-        </a>{" "}
-        to provide feedback.
-      </Alert>
       <Grid row gap>
         <Grid desktop={{ col: true }} className="text-left">
           <h1>About CAM API</h1>
@@ -33,8 +15,6 @@ export const About = () => {
             plants.&nbsp; Developers can use these APIs to build applications or
             create analyses using a variety of platforms.
           </p>
-
-          <APIKeyModal />
         </Grid>
       </Grid>
 

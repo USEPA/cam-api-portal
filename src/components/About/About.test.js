@@ -33,14 +33,11 @@ describe("Test the About page", () => {
 
     const { container, getByText } = query;
 
-    expect(screen.getByText("Request an API Key")).toBeTruthy();
     expect(screen.getByText("CAMPD Application")).toBeTruthy();
     expect(screen.getByText("ECMPS 2.0 Application")).toBeTruthy();
 
-    fireEvent.click(getByText("Request an API Key"));
     fireEvent.click(getByText("CAMPD Application"));
     fireEvent.click(getByText("ECMPS 2.0 Application"));
-
     expect(container.querySelector(".usa-button")).toBeInTheDocument();
   });
 

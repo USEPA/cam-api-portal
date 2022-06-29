@@ -66,5 +66,12 @@ export const constants = {
       version: "v1.0.116",
       publish: "Thu Mar 24 2022",
     },
+    {
+      title: "Streaming Services",
+      description:
+        "Streaming services API contains endpoints to stream account, allowance, facilities, and emissions data",
+      version: "v1.0.5",
+      publish: "Mon Jun 13 2022",
+    },
   ],
 };
