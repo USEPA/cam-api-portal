@@ -21,13 +21,14 @@ export const RelatedResources = () => {
             <p>
               {" "}
               Resources about the data and programs related to CAMPD and ECMPS,
-              APIs and Swagger documentations.
+              APIs, and Swagger documentation.
             </p>
           </Grid>
           <Grid row className="padding-2">
             <CardGroup>
               <Card gridLayout={{ tablet: { col: 6 } }}>
                 <CardHeader align="center">
+                  <h2>Clean Air Markets Data Resources</h2>
                   <IconAssessment
                     size={4}
                     title="Icon for other card"
@@ -102,6 +103,7 @@ export const RelatedResources = () => {
               </Card>
               <Card gridLayout={{ tablet: { col: 6 } }}>
                 <CardHeader align="center">
+                  <h2>Application Programming Interface Resources</h2>
                   <IconInsights
                     size={4}
                     title="Icon for other card"
