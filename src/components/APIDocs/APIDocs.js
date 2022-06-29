@@ -31,7 +31,7 @@ export const APIDocs = () => {
                 <Card
                   gridLayout={{ desktop: { col: 6 } }}
                   key={index}
-                  align="left"
+                  align="center"
                 >
                   <CardHeader>
                     <h2
@@ -47,7 +47,7 @@ export const APIDocs = () => {
                   <CardFooter>
                     <a href={`/swagger/${page.name}`} rel="noopener noreferrer">
                       <Button className="usa-button" type="button">
-                        Go to Docs
+                        View docs
                       </Button>
                     </a>
                   </CardFooter>

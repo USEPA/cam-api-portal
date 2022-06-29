@@ -10,8 +10,9 @@ import {
   CardFooter,
   IconHelpOutline,
   IconReduceCapacity,
-  IconFlag,
   IconNotifications,
+  IconAlternateEmail,
+  // IconMap,
   CardGroup,
 } from "@trussworks/react-uswds";
 
@@ -104,7 +105,7 @@ export const HelpResources = () => {
               <Card gridLayout={{ tablet: { col: 4 } }} align="center">
                 <CardHeader>
                   <h2>Contact Us</h2>
-                  <IconFlag
+                  <IconAlternateEmail
                     size={4}
                     title="Icon for other card"
                     className="palette-color-grayscale"
@@ -112,7 +113,7 @@ export const HelpResources = () => {
                 </CardHeader>
 
                 <CardBody>
-                  <p>Reach out to CAMD for further questions.</p>
+                  <p>Reach out to CAMD for further questions</p>
                 </CardBody>
 
                 <CardFooter>

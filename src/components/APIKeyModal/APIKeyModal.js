@@ -18,7 +18,7 @@ export const APIKeyModal = () => {
   return (
     <div>
       <ModalToggleButton
-        className="usa-button"
+        className="usa-button usa-button--outline usa-button--inverse"
         modalRef={modalRef}
         opener={onToggle}
       >
