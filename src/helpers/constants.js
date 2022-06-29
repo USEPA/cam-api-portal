@@ -35,6 +35,43 @@ export const constants = {
       title: "Streaming Services",
       description:
         "Streaming services API contains endpoints to stream account, allowance, facilities, and emissions data",
-    },    
+    },
+  ],
+  releasePages: [
+    {
+      title: "Account Management",
+      description:
+        "Account management API endpoints for account information, allowance holdings, transactions, and compliance",
+      version: "v1.0.99",
+      publish: "Mon Apr 18 2022",
+    },
+    {
+      title: "Facilities Management",
+      description:
+        "Facility management API endpoints for power sector facilities and their attributes (e.g. units, stacks, and owners)",
+      version: "v1.0.143",
+      publish: "Fri Apr 15 2022",
+    },
+    {
+      title: "Emissions Management",
+      description:
+        "Emissions management API endpoints for apportioned emissions data (e.g. hourly, daily, monthly, annual, and ozone season)",
+      version: "v1.0.272",
+      publish: "Tue May 10 2022",
+    },
+    {
+      title: "Master Data Management",
+      description:
+        "Master data management API endpoints for lookup codes and data relationships",
+      version: "v1.0.116",
+      publish: "Thu Mar 24 2022",
+    },
+    {
+      title: "Streaming Services",
+      description:
+        "Streaming services API contains endpoints to stream account, allowance, facilities, and emissions data",
+      version: "v1.0.5",
+      publish: "Mon Jun 13 2022",
+    },
   ],
 };

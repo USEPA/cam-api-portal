@@ -1,42 +1,37 @@
+import React from "react";
 import {
-  Grid,
-  GridContainer,
   CardGroup,
   Card,
   CardHeader,
   CardBody,
   CardFooter,
-  Button,
+  Grid,
+  GridContainer,
 } from "@trussworks/react-uswds";
-import React from "react";
 import { constants } from "../../helpers/constants";
 
-export const APIDocs = () => {
+export const ReleaseNotes = () => {
   return (
     <article>
       <GridContainer>
         <Grid row gap>
-          <Grid desktop={{ col: 12 }} className="text-left">
-            <h1>API Documentation</h1>
-            <p>
-              Explore the following CAM API Swagger docs for endpoints that
-              serve emissions, account, and compliance information.
-            </p>
+          <Grid desktop={{ col: true }} className="text-left">
+            <h1>Release Notes</h1>
           </Grid>
         </Grid>
         <Grid row gap>
           <CardGroup>
-            {constants.swaggerPages.map((page, index) => {
+            {constants.releasePages.map((page, index) => {
               return (
                 <Card
                   gridLayout={{ desktop: { col: 6 } }}
                   key={index}
-                  align="center"
+                  align="left"
                 >
                   <CardHeader>
                     <h2
                       className="usa-card__heading"
-                      aria-label={`${page.title} API documents card`}
+                      aria-label={`${page.title} Release Notes card`}
                     >
                       {page.title}
                     </h2>
@@ -45,11 +40,16 @@ export const APIDocs = () => {
                     <p>{page.description}</p>
                   </CardBody>
                   <CardFooter>
-                    <a href={`/swagger/${page.name}`} rel="noopener noreferrer">
-                      <Button className="usa-button" type="button">
-                        View docs
-                      </Button>
-                    </a>
+                    <div className="card-text">
+                      <ul className="usa-list usa-list--unstyled">
+                        <li>
+                          <strong>Version: {page.version} </strong>
+                        </li>
+                        <li>
+                          <strong>Published date: {page.publish} </strong>
+                        </li>
+                      </ul>
+                    </div>
                   </CardFooter>
                 </Card>
               );
