@@ -15,37 +15,45 @@ export const SubHeader = () => {
   const subHeaderMenuList = [
     {
       label: "Home",
-      items: [{ menu: "Home", link: `/`, tab: false }],
+      items: [{ menu: "Home", link: `/`, external: false }],
     },
     {
       label: "API Documentation",
       items: [
-        { menu: "Account API", link: `/swagger/account-mgmt`, tab: false },
+        { menu: "Account API", link: `/swagger/account-mgmt`, external: false },
         {
           menu: "Facilities API",
           link: `/swagger/facilities-mgmt`,
-          tab: false,
+          external: false,
         },
-        { menu: "Emissions API", link: `/swagger/emissions-mgmt`, tab: false },
+        {
+          menu: "Emissions API",
+          link: `/swagger/emissions-mgmt`,
+          external: false,
+        },
         {
           menu: "Master Data Management API",
           link: `/swagger/master-data-mgmt`,
-          tab: false,
+          external: false,
         },
         {
           menu: "Streaming Services API",
           link: `/swagger/streaming-services`,
-          tab: false,
+          external: false,
         },
       ],
     },
     {
       label: "Help & Resources",
       items: [
-        { menu: "API Guides", link: `/api-guides`, tab: false },
-        { menu: "FAQs", link: `/faq`, tab: false },
-        { menu: "Related Resources", link: `/related-resources`, tab: false },
-        { menu: "Release Notes", link: `/release-notes`, tab: false },
+        // { menu: "API Guides", link: `/api-guides`, external: false },
+        { menu: "FAQs", link: `/faq`, external: false },
+        {
+          menu: "Related Resources",
+          link: `/related-resources`,
+          external: false,
+        },
+        { menu: "Release Notes", link: `/release-notes`, external: false },
       ],
     },
     {
@@ -54,7 +62,7 @@ export const SubHeader = () => {
         {
           menu: "Contact Us",
           link: `https://www.epa.gov/airmarkets/forms/cam-api-contact-us`,
-          tab: true,
+          external: true,
         },
       ],
     },
@@ -72,12 +80,8 @@ export const SubHeader = () => {
     false,
     false,
     false,
-    false,
-    false,
   ]);
   const [categorySelected, setCategorySelected] = useState([
-    false,
-    false,
     false,
     false,
     false,
@@ -117,7 +121,7 @@ export const SubHeader = () => {
                   // if there is only one item in the menu list , the 1st if; else other.
                   return (
                     <>
-                      {el.items[0].tab ? (
+                      {el.items[0].external ? (
                         <USWDSLink
                           href={el.items[0].link}
                           rel={el.items[0].link}
@@ -161,7 +165,7 @@ export const SubHeader = () => {
                             : null
                         }
                         items={el.items.map((item) =>
-                          item.tab ? (
+                          item.external ? (
                             <USWDSLink
                               href={item.link}
                               rel={item.link}
