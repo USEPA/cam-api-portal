@@ -17,7 +17,7 @@ export const HomePageCards = () => {
     <section>
       <CardGroup>
         <Card gridLayout={{ tablet: { col: 6 } }} align="center">
-          <CardHeader align="center">
+          <CardHeader>
             <h2>API Documentation</h2>
             <IconContentCopy size={4} title="Icon for API Docs" />
           </CardHeader>
@@ -32,7 +32,7 @@ export const HomePageCards = () => {
         </Card>
 
         <Card gridLayout={{ tablet: { col: 6 } }} align="center">
-          <CardHeader align="center">
+          <CardHeader>
             <h2>Help & Resources</h2>
             <IconInfo
               size={4}
