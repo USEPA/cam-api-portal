@@ -1,7 +1,7 @@
 import React from "react";
 import { cleanup, render, screen } from "@testing-library/react";
 import { HomePage } from "./HomePage";
-import { axe, toHaveNoViolations } from "jest-axe";
+//import { axe, toHaveNoViolations } from "jest-axe";
 import { MemoryRouter } from "react-router-dom";
 
 jest.setTimeout(100000);

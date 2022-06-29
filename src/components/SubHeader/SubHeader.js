@@ -11,37 +11,41 @@ import {
 import { APIKeyModal } from "../APIKeyModal/APIKeyModal";
 import { Link as RouterLink } from "react-router-dom";
 
-export const SubHeader = ({ setCurrentLink }) => {
+export const SubHeader = () => {
   const subHeaderMenuList = [
     {
       label: "Home",
-      items: [{ menu: "Home", link: `/`, tab: true }],
+      items: [{ menu: "Home", link: `/`, tab: false }],
     },
     {
       label: "API Documentation",
       items: [
-        { menu: "Account API", link: `/swagger/account-mgmt`, tab: true },
-        { menu: "Facilities API", link: `/swagger/facilities-mgmt`, tab: true },
-        { menu: "Emissions API", link: `/swagger/emissions-mgmt`, tab: true },
+        { menu: "Account API", link: `/swagger/account-mgmt`, tab: false },
+        {
+          menu: "Facilities API",
+          link: `/swagger/facilities-mgmt`,
+          tab: false,
+        },
+        { menu: "Emissions API", link: `/swagger/emissions-mgmt`, tab: false },
         {
           menu: "Master Data Management API",
           link: `/swagger/master-data-mgmt`,
-          tab: true,
+          tab: false,
         },
         {
           menu: "Streaming Services API",
           link: `/swagger/streaming-services`,
-          tab: true,
+          tab: false,
         },
       ],
     },
     {
       label: "Help & Resources",
       items: [
-        { menu: "API Guides", link: `/api-guides`, tab: true },
-        { menu: "FAQs", link: `/faq`, tab: true },
-        { menu: "Related Resources", link: `/related-resources`, tab: true },
-        { menu: "Release Notes", link: `/release-notes`, tab: true },
+        { menu: "API Guides", link: `/api-guides`, tab: false },
+        { menu: "FAQs", link: `/faq`, tab: false },
+        { menu: "Related Resources", link: `/related-resources`, tab: false },
+        { menu: "Release Notes", link: `/release-notes`, tab: false },
       ],
     },
     {
@@ -80,6 +84,8 @@ export const SubHeader = ({ setCurrentLink }) => {
     false,
   ]);
 
+  // This function is used to set the aria-expanded label when the nav menu is
+  // clicked in the NavDropdown component via the isOpen prop
   const handleToggleNavDropdown = (column) => {
     setNavDropdownOpen((prevNavDropdownOpen) => {
       const newOpenState = Array(prevNavDropdownOpen.length).fill(false);
@@ -89,7 +95,6 @@ export const SubHeader = ({ setCurrentLink }) => {
   };
 
   const handleSubMenuClick = (column) => {
-    setCurrentLink(false);
     handleToggleNavDropdown(column);
 
     setCategorySelected([false, false, false, false, false]);
@@ -108,19 +113,29 @@ export const SubHeader = ({ setCurrentLink }) => {
             <PrimaryNav
               className="bg-primary-dark float-left desktop:margin-top-1 desktop-lg:margin-top-0"
               items={subHeaderMenuList.map((el, i) => {
-                if (el.items.length === 0) {
+                if (el.items.length === 1) {
                   // if there is only one item in the menu list , the 1st if; else other.
                   return (
                     <>
-                      <RouterLink
-                        href={el.items[0].link}
-                        target="_blank"
-                        title={el.label}
-                        aria-label={el.label}
-                        onClick={() => handleSubMenuClick(i)}
-                      >
-                        {el.label}
-                      </RouterLink>
+                      {el.items[0].tab ? (
+                        <USWDSLink
+                          href={el.items[0].link}
+                          rel={el.items[0].link}
+                          target="_blank"
+                          style={{ color: "white" }}
+                          onClick={() => handleSubMenuClick(i)}
+                        >
+                          {el.label}
+                        </USWDSLink>
+                      ) : (
+                        <RouterLink
+                          style={{ color: "white" }}
+                          to={el.items[0].link}
+                          onClick={() => handleSubMenuClick(i)}
+                        >
+                          {el.label}
+                        </RouterLink>
+                      )}
                       {categorySelected[i] === true ? (
                         <div className="menu-underline" />
                       ) : null}
@@ -155,7 +170,12 @@ export const SubHeader = ({ setCurrentLink }) => {
                               {item.menu}
                             </USWDSLink>
                           ) : (
-                            <RouterLink to={item.link}>{item.menu}</RouterLink>
+                            <RouterLink
+                              to={item.link}
+                              style={{ color: "white" }}
+                            >
+                              {item.menu}
+                            </RouterLink>
                           )
                         )}
                         isOpen={navDropdownOpen[i]}
@@ -172,7 +192,9 @@ export const SubHeader = ({ setCurrentLink }) => {
             ></PrimaryNav>
             <div className="float-right desktop:margin-top-1 desktop-lg:margin-top-0">
               <APIKeyModal />
-              <NavMenuButton onClick={onClick} label="Menu" />
+              <div className="float-right">
+                <NavMenuButton onClick={onClick} label="Menu" />
+              </div>
             </div>
           </div>
         </div>
