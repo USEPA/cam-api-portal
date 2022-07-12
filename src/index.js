@@ -7,7 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/airmarkets/cam-api-portal">
       <App />
     </BrowserRouter>
   </React.StrictMode>,
