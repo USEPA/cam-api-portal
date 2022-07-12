@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button, GridContainer, Grid } from "@trussworks/react-uswds";
+import { Button, Grid } from "@trussworks/react-uswds";
 
 export const About = () => {
   return (
