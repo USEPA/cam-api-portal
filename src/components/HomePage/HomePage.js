@@ -6,13 +6,9 @@ import { HomePageCards } from "../HomePageCards/HomePageCards";
 export const HomePage = () => {
   return (
     <GridContainer>
-      <Grid row>
-        <Grid>
-          <About />
-        </Grid>
-        <Grid row className="padding-3">
-          <HomePageCards />
-        </Grid>
+      <About />
+      <Grid row className="padding-3">
+        <HomePageCards />
       </Grid>
     </GridContainer>
   );

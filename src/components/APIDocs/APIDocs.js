@@ -9,6 +9,7 @@ import {
   Button,
 } from "@trussworks/react-uswds";
 import React from "react";
+import { Link as RouterLink } from "react-router-dom";
 import { constants } from "../../helpers/constants";
 
 export const APIDocs = () => {
@@ -45,11 +46,14 @@ export const APIDocs = () => {
                     <p>{page.description}</p>
                   </CardBody>
                   <CardFooter>
-                    <a href={`/swagger/${page.name}`} rel="noopener noreferrer">
+                    <RouterLink
+                      to={`/swagger/${page.name}`}
+                      rel="noopener noreferrer"
+                    >
                       <Button className="usa-button" type="button">
                         View docs
                       </Button>
-                    </a>
+                    </RouterLink>
                   </CardFooter>
                 </Card>
               );
