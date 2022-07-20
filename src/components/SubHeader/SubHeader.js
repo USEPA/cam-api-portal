@@ -106,16 +106,16 @@ export const SubHeader = () => {
 
   return (
     <>
-      <Header className="bg-primary-dark padding-y-2 mobile-lg:padding-x-1 desktop:padding-x-4">
+      <Header className="padding-y-2 mobile-lg:padding-x-1 desktop:padding-x-4">
         <div className="clearfix padding-x-0 desktop-lg:margin-top-3">
           <Title className="float-left margin-1 margin-top-0 desktop:margin-top-1  desktop-lg:margin-top-0 ">
-            <h1 className="text-white text-bold desktop-lg:font-sans-2xl desktop:font-sans-2xl mobile-lg:font-sans-xl margin-0">
+            <h1 className="text-bold desktop-lg:font-sans-2xl desktop:font-sans-2xl mobile-lg:font-sans-xl margin-0">
               CAM API
             </h1>
           </Title>
           <div className="float-right">
             <PrimaryNav
-              className="bg-primary-dark float-left desktop:margin-top-1 desktop-lg:margin-top-0"
+              className="float-left desktop:margin-top-1 desktop-lg:margin-top-0"
               items={subHeaderMenuList.map((el, i) => {
                 if (el.items.length === 1) {
                   // if there is only one item in the menu list , the 1st if; else other.
@@ -126,14 +126,12 @@ export const SubHeader = () => {
                           href={el.items[0].link}
                           rel={el.items[0].link}
                           target="_blank"
-                          style={{ color: "white" }}
                           onClick={() => handleSubMenuClick(i)}
                         >
                           {el.label}
                         </USWDSLink>
                       ) : (
                         <RouterLink
-                          style={{ color: "white" }}
                           to={el.items[0].link}
                           onClick={() => handleSubMenuClick(i)}
                         >
@@ -156,7 +154,6 @@ export const SubHeader = () => {
                         onToggle={() => {
                           handleToggleNavDropdown(i);
                         }}
-                        style={{ color: "white" }}
                       />
                       <Menu
                         id={
@@ -166,20 +163,11 @@ export const SubHeader = () => {
                         }
                         items={el.items.map((item) =>
                           item.external ? (
-                            <USWDSLink
-                              href={item.link}
-                              rel={item.link}
-                              style={{ color: "white" }}
-                            >
+                            <USWDSLink href={item.link} rel={item.link}>
                               {item.menu}
                             </USWDSLink>
                           ) : (
-                            <RouterLink
-                              to={item.link}
-                              style={{ color: "white" }}
-                            >
-                              {item.menu}
-                            </RouterLink>
+                            <RouterLink to={item.link}>{item.menu}</RouterLink>
                           )
                         )}
                         isOpen={navDropdownOpen[i]}
