@@ -32,7 +32,7 @@ export const constants = {
     {
       name: "streaming-services",
       url: "https://api.epa.gov/easey/streaming-services/swagger-json",
-      title: "Streaming Services Management",
+      title: "Streaming Services",
       description:
         "Streaming services API contains endpoints to stream account, allowance, facilities, and emissions data",
     },
@@ -67,7 +67,7 @@ export const constants = {
       publish: "Thu Mar 24 2022",
     },
     {
-      title: "Streaming Services Management",
+      title: "Streaming Services",
       description:
         "Streaming services API contains endpoints to stream account, allowance, facilities, and emissions data",
       version: "v1.0.5",
