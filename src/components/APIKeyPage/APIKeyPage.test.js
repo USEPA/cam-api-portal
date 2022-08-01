@@ -1,16 +1,16 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { SubHeader } from "./SubHeader";
+import { APIKeyPage, SubHeader } from "./APIKeyPage";
 import { axe, toHaveNoViolations } from "jest-axe";
 import { MemoryRouter } from "react-router-dom";
 
-test("renders the SubHeader page", () => {
+test("renders the APIKey page", () => {
   render(
     <MemoryRouter>
-      <SubHeader />
+      <APIKeyPage />
     </MemoryRouter>
   );
-  expect(screen.getByText(/Home/i)).toBeInTheDocument();
+  expect(screen.getByText(/Sign Up/i)).toBeInTheDocument();
 });
 
 expect.extend(toHaveNoViolations);
@@ -18,7 +18,7 @@ expect.extend(toHaveNoViolations);
 it("should pass axe accessibility tests", async () => {
   const { container } = render(
     <MemoryRouter>
-      <SubHeader />
+      <APIKeyPage />
     </MemoryRouter>
   );
   const results = await axe(container);

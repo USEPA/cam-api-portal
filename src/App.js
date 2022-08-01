@@ -7,11 +7,16 @@ import { APIDocs } from "./components/APIDocs/APIDocs";
 import { HelpResources } from "./components/HelpResources/HelpResources";
 import { ReleaseNotes } from "./components/ReleaseNotes/ReleaseNotes";
 import { RelatedResources } from "./components/RelatedResources/RelatedResources";
+import { APIKeyPage } from "./components/APIKeyPage/APIKeyPage";
 import { FAQ } from "./components/FAQ/FAQ";
-import "./App.css";
-import "@trussworks/react-uswds/lib/uswds.css";
-import "@trussworks/react-uswds/lib/index.css";
 import { SwaggerPage } from "./components/SwaggerPage/SwaggerPage";
+import "./App.css";
+// When running npm run start, the NODE_ENV will be development, so we can avoid
+// adding the uswds css in the production buildpack.
+if (process.env.NODE_ENV === "development") {
+  import("@trussworks/react-uswds/lib/uswds.css");
+  import("@trussworks/react-uswds/lib/index.css");
+}
 
 function App() {
   return (
@@ -25,6 +30,7 @@ function App() {
           <Route path="/help-resources" element={<HelpResources />} />
           <Route path="/release-notes" element={<ReleaseNotes />} />
           <Route path="/related-resources" element={<RelatedResources />} />
+          <Route path="/api-key-signup" element={<APIKeyPage />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
