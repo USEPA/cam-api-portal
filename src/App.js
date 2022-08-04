@@ -5,7 +5,7 @@ import { HomePage } from "./components/HomePage/HomePage";
 import { NotFoundPage } from "./components/NotFoundPage/NotFoundPage";
 import { APIDocs } from "./components/APIDocs/APIDocs";
 import { HelpResources } from "./components/HelpResources/HelpResources";
-import { ReleaseNotes } from "./components/ReleaseNotes/ReleaseNotes";
+// import { ReleaseNotes } from "./components/ReleaseNotes/ReleaseNotes";
 import { RelatedResources } from "./components/RelatedResources/RelatedResources";
 import { FAQ } from "./components/FAQ/FAQ";
 import "./App.css";
@@ -23,7 +23,7 @@ function App() {
           <Route path="/documentation" element={<APIDocs />} />
           <Route path="/swagger/:endpoint" element={<SwaggerPage />} />
           <Route path="/help-resources" element={<HelpResources />} />
-          <Route path="/release-notes" element={<ReleaseNotes />} />
+          {/* Waiting for a better way to gather release notes <Route path="/release-notes" element={<ReleaseNotes />} /> */}
           <Route path="/related-resources" element={<RelatedResources />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="*" element={<NotFoundPage />} />
