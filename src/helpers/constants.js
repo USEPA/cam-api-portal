@@ -94,5 +94,10 @@ export const constants = {
       link: `https://www.epa.gov/airmarkets/forms/cam-api-contact-us`,
       external: true,
     },
+    {
+      label: "Request an API Key",
+      link: `/api-key-signup`,
+      external: false,
+    },
   ],
 };

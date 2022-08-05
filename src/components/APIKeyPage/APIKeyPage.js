@@ -27,7 +27,7 @@ export const APIKeyPage = () => {
   return (
     <GridContainer>
       <Grid row gap>
-        <Grid desktop={{ col: 12 }} className="text-left">
+        <Grid desktop={{ col: 6 }} className="text-left">
           <h1>Sign Up for an API Key</h1>
           <div id="apidatagov_signup">Loading signup form...</div>
         </Grid>
