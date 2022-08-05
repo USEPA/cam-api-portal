@@ -27,7 +27,7 @@ export const About = () => {
         </Grid>
       </Grid>
 
-      <Grid row gap>
+      <Grid row gap className="padding-top-3">
         <Grid desktop={{ col: true }} className="text-left">
           <h2>CAMPD</h2>
           <p>
