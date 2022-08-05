@@ -17,7 +17,6 @@ export const About = () => {
           </p>
           <RouterLink to="/api-key-signup" rel="noopener noreferrer">
             <Button
-              // Have to manually color the button text white, since it inherits the gray from the usa-nav header class
               className="usa-button"
               type="button"
             >
