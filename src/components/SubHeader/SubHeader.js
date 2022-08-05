@@ -1,5 +1,5 @@
 import React from "react";
-import { Link as USWDSLink, Button } from "@trussworks/react-uswds";
+import { Link as USWDSLink } from "@trussworks/react-uswds";
 import { Link as RouterLink } from "react-router-dom";
 import { constants } from "../../helpers/constants";
 
