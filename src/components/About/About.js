@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link as RouterLink } from "react-router-dom";
 import { Button, Grid } from "@trussworks/react-uswds";
 
 export const About = () => {
@@ -15,10 +15,18 @@ export const About = () => {
             plants.&nbsp; Developers can use these APIs to build applications or
             create analyses using a variety of platforms.
           </p>
+          <RouterLink to="/api-key-signup" rel="noopener noreferrer">
+            <Button
+              className="usa-button"
+              type="button"
+            >
+              Request an API Key
+            </Button>
+          </RouterLink>
         </Grid>
       </Grid>
 
-      <Grid row gap>
+      <Grid row gap className="padding-top-3">
         <Grid desktop={{ col: true }} className="text-left">
           <h2>CAMPD</h2>
           <p>

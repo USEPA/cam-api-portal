@@ -32,7 +32,7 @@ export const APIDocs = () => {
                 <Card
                   gridLayout={{ desktop: { col: 6 } }}
                   key={index}
-                  align="center"
+                  align="left"
                 >
                   <CardHeader>
                     <h2
