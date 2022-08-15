@@ -10,7 +10,7 @@ import {
   CardFooter,
   IconHelpOutline,
   IconReduceCapacity,
-  IconNotifications,
+  // IconNotifications,
   IconAlternateEmail,
   // IconMap,
   CardGroup,
@@ -49,7 +49,7 @@ export const HelpResources = () => {
                 </CardFooter>
               </Card>
 
-              <Card gridLayout={{ tablet: { col: 4 } }} align="center">
+              {/* <Card gridLayout={{ tablet: { col: 4 } }} align="center">
                 <CardHeader>
                   <h2>Release Notes</h2>
                   <IconNotifications
@@ -66,7 +66,7 @@ export const HelpResources = () => {
                 <CardFooter>
                   <RouterLink to="/release-notes">Release Notes</RouterLink>
                 </CardFooter>
-              </Card>
+              </Card> */}
 
               <Card gridLayout={{ tablet: { col: 4 } }} align="center">
                 <CardHeader>
