@@ -53,7 +53,12 @@ export const SubHeader = () => {
           link: `/related-resources`,
           external: false,
         },
-        { menu: "Release Notes", link: `/release-notes`, external: false },
+        {
+          menu: "API Examples",
+          link: `https://github.com/USEPA/cam-api-examples`,
+          external: true,
+        },
+        // { menu: "Release Notes", link: `/release-notes`, external: false },
       ],
     },
     {
