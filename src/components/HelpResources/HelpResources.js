@@ -10,6 +10,7 @@ import {
   CardFooter,
   IconHelpOutline,
   IconReduceCapacity,
+  IconApi,
   // IconNotifications,
   IconAlternateEmail,
   // IconMap,
@@ -123,6 +124,30 @@ export const HelpResources = () => {
                     rel="noreferrer"
                   >
                     Contact Us
+                  </a>
+                </CardFooter>
+              </Card>
+              <Card gridLayout={{ tablet: { col: 4 } }} align="center">
+                <CardHeader>
+                  <h2>API Examples</h2>
+                  <IconApi
+                    size={4}
+                    title="Icon for other card"
+                    className="palette-color-grayscale"
+                  />
+                </CardHeader>
+
+                <CardBody>
+                  <p>Examples scripts for CAM API queries</p>
+                </CardBody>
+
+                <CardFooter>
+                  <a
+                    href="https://github.com/USEPA/cam-api-examples"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    API Examples
                   </a>
                 </CardFooter>
               </Card>
