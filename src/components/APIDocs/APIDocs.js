@@ -8,7 +8,7 @@ import {
   CardFooter,
   Button,
 } from "@trussworks/react-uswds";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { constants } from "../../helpers/constants";
 
