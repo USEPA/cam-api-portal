@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { GridContainer, Grid } from "@trussworks/react-uswds";
 
 export const FAQ = () => {
+  const faqRef = useRef(null);
+  useEffect(() => {
+    faqRef.current.focus();
+  });
   return (
     <GridContainer>
       <Grid row gap>
         <Grid desktop={{ col: 12 }} className="text-left">
-          <h1>Frequently Asked Questions</h1>
+          <h1 tabIndex={-1} ref={faqRef} style={{ outline: "none" }}>
+            Frequently Asked Questions
+          </h1>
           <p>
             There are currently no FAQs, but they will be added as questions are
             submitted. Please visit the{" "}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import {
   GridContainer,
   Grid,
@@ -12,12 +12,18 @@ import {
 } from "@trussworks/react-uswds";
 
 export const RelatedResources = () => {
+  const relatedRef = useRef(null);
+  useEffect(() => {
+    relatedRef.current.focus();
+  });
   return (
     <article>
       <GridContainer>
         <Grid row gap>
           <Grid desktop={{ col: 12 }} className="text-left">
-            <h1>Related Resources</h1>
+            <h1 tabIndex={-1} ref={relatedRef} style={{ outline: "none" }}>
+              Related Resources
+            </h1>
             <p>
               {" "}
               Resources about the data and programs related to CAMPD and ECMPS,
