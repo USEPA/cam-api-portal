@@ -129,7 +129,7 @@ export const HelpResources = () => {
               </Card>
               <Card gridLayout={{ tablet: { col: 4 } }} align="center">
                 <CardHeader>
-                  <h2>API Examples</h2>
+                  <h2>Example API Usage</h2>
                   <IconApi
                     size={4}
                     title="Icon for other card"
@@ -138,7 +138,7 @@ export const HelpResources = () => {
                 </CardHeader>
 
                 <CardBody>
-                  <p>Examples scripts for CAM API queries</p>
+                  <p>Example scripts for CAM API queries</p>
                 </CardBody>
 
                 <CardFooter>
@@ -147,7 +147,7 @@ export const HelpResources = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    API Examples
+                    Example API Usage
                   </a>
                 </CardFooter>
               </Card>
