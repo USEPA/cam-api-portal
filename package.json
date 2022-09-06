@@ -10,8 +10,10 @@
     "@us-epa-camd/easey-design-system": "^1.27.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-markdown": "^8.0.3",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.1",
+    "remark-gfm": "^3.0.1",
     "swagger-ui-react": "^4.10.3",
     "uswds": "^2.11.2",
     "web-vitals": "^1.1.2"

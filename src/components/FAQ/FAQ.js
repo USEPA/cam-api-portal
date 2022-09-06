@@ -1,30 +1,21 @@
-import React from "react";
-import { GridContainer, Grid } from "@trussworks/react-uswds";
-import { constants } from "../../helpers/constants";
+import React, { useState, useEffect } from "react";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import faq from "./faq.md";
 
 export const FAQ = () => {
+  let [readable, setReadable] = useState({ md: "" });
+
+  useEffect(() => {
+    fetch(faq)
+      .then((res) => res.text())
+      .then((md) => {
+        setReadable({ md });
+      });
+  }, []);
+
   return (
-    <article>
-      <GridContainer>
-        <Grid row gap>
-          <Grid className="text-left" desktop={{ col: true }}>
-            <h1>Frequently Asked Questions</h1>
-            <Grid row gap>
-              {constants.faqPages.map((page, i) => {
-                const paragraph = page.content;
-                return (
-                  <ul className="usa-list usa-list--unstyled" key={i}>
-                    <li>
-                      <strong>{page.title}</strong>
-                      <p dangerouslySetInnerHTML={{ __html: paragraph }}></p>
-                    </li>
-                  </ul>
-                );
-              })}
-            </Grid>
-          </Grid>
-        </Grid>
-      </GridContainer>
-    </article>
+    <div className="faq">
+      <ReactMarkdown children={readable.md} />
+    </div>
   );
 };
