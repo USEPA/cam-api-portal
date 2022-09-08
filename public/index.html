@@ -12,6 +12,9 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <h1 class="page-title">
+      CAM API Portal
+    </h1>
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -23,23 +26,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <!-- api.data.gov Sign-up -->
-    <script type="text/javascript">
-      var apiUmbrellaSignupOptions = {
-      registrationSource: 'cam-api-portal',
-      apiKey: '%REACT_APP_API_UMBRELLA_KEY_CREATOR%',
-      exampleApiUrl: 'https://api.epa.gov/easey/master-data-mgmt/control-technologies?api_key=?api_key={{api_key}}',
-      contactUrl: 'https://www.epa.gov/airmarkets/forms/cam-api-contact-us',
-      };
-
-      (function() {
-      var apiUmbrella = document.createElement('script'); apiUmbrella.type = 'text/javascript'; apiUmbrella.async = true;
-      apiUmbrella.src = 'https://api.data.gov/static/javascripts/signup_embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(apiUmbrella);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to signup for an <a href="http://api.data.gov/">api.data.gov</a> API key.</noscript>
-    <!-- /api.data.gov sign-up -->       
 
   </body>
 </html>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { GridContainer, Grid } from "@trussworks/react-uswds";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -10,18 +10,24 @@ import {
   CardFooter,
   IconHelpOutline,
   IconReduceCapacity,
-  IconNotifications,
+  // IconNotifications,
   IconAlternateEmail,
   // IconMap,
   CardGroup,
 } from "@trussworks/react-uswds";
 
 export const HelpResources = () => {
+  const helpResourcesRef = useRef(null);
+  useEffect(() => {
+    helpResourcesRef.current.focus();
+  });
   return (
     <GridContainer>
       <Grid row gap>
         <Grid desktop={{ col: true }} className="text-left">
-          <h1>Help & Resources</h1>
+          <h1 tabIndex={-1} ref={helpResourcesRef} style={{ outline: "none" }}>
+            Help & Resources
+          </h1>
           <p>
             The Clean Air Markets APIs provide a large amount of detailed power
             sector emissions data. Below are resources that can be used to help
@@ -49,7 +55,7 @@ export const HelpResources = () => {
                 </CardFooter>
               </Card>
 
-              <Card gridLayout={{ tablet: { col: 4 } }} align="center">
+              {/* <Card gridLayout={{ tablet: { col: 4 } }} align="center">
                 <CardHeader>
                   <h2>Release Notes</h2>
                   <IconNotifications
@@ -66,7 +72,7 @@ export const HelpResources = () => {
                 <CardFooter>
                   <RouterLink to="/release-notes">Release Notes</RouterLink>
                 </CardFooter>
-              </Card>
+              </Card> */}
 
               <Card gridLayout={{ tablet: { col: 4 } }} align="center">
                 <CardHeader>

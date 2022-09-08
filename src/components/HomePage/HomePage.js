@@ -7,7 +7,7 @@ export const HomePage = () => {
   return (
     <GridContainer>
       <About />
-      <Grid row className="padding-3">
+      <Grid row className="padding-top-3">
         <HomePageCards />
       </Grid>
     </GridContainer>
