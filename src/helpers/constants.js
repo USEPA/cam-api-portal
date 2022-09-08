@@ -74,12 +74,4 @@ export const constants = {
       publish: "Mon Jun 13 2022",
     },
   ],
-  faqPages: [
-    {
-      title: "Are there any restrictions or limitations on the CAM APIs?",
-      content: [
-        "For the CAM APIs, we are using the following: <ul><li>Default rate limits of 1,000 requests per hour </li> <li> 15-minute timeout on any API request, and </li> <li> Endpoints that support paging are limited to 25,000 rows per page </li></ul> </br>The CAMPD app user interface limits downloads from the streaming services to 1, 000, 000 records but there is no download records limit on the streaming services APIs.",
-      ],
-    },
-  ],
 };
