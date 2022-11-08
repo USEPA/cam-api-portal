@@ -21,7 +21,7 @@ export const FAQ = () => {
               target="_blank"
               rel="noreferrer noopener"
             >
-              Contact Us
+              Provide Feedback
             </a>{" "}
             page to ask questions about the CAM API.
           </p>

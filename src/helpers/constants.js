@@ -90,7 +90,7 @@ export const constants = {
       link: `/help-resources`,
     },
     {
-      label: "Contact Us",
+      label: "Provide Feedback",
       link: `https://www.epa.gov/airmarkets/forms/cam-api-contact-us`,
       external: true,
     },

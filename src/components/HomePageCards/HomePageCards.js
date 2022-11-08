@@ -43,8 +43,8 @@ export const HomePageCards = () => {
 
           <CardBody>
             <p>
-              Links to Overview, Related Resources, FAQs, Release Notes and
-              Contact Us
+              Links to Overview, Related Resources, FAQs, Release Notes, and
+              Provide Feedback
             </p>
           </CardBody>
 

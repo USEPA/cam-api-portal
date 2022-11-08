@@ -110,7 +110,7 @@ export const HelpResources = () => {
               </Card> */}
               <Card gridLayout={{ tablet: { col: 4 } }} align="center">
                 <CardHeader>
-                  <h2>Contact Us</h2>
+                  <h2>Provide Feedback</h2>
                   <IconAlternateEmail
                     size={4}
                     title="Icon for other card"
@@ -119,7 +119,7 @@ export const HelpResources = () => {
                 </CardHeader>
 
                 <CardBody>
-                  <p>Reach out to CAMD for further questions</p>
+                  <p>Reach out to CAMD for further questions and feedback</p>
                 </CardBody>
 
                 <CardFooter>
@@ -128,7 +128,7 @@ export const HelpResources = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Contact Us
+                    Provide Feedback
                   </a>
                 </CardFooter>
               </Card>
