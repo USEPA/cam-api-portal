@@ -119,7 +119,7 @@ export const HelpResources = () => {
                 </CardHeader>
 
                 <CardBody>
-                  <p>Reach out to CAMD for further questions and feedback</p>
+                  <p>Reach out to CAMD with further questions and feedback</p>
                 </CardBody>
 
                 <CardFooter>
