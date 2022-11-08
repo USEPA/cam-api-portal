@@ -85,7 +85,7 @@ export const HelpResources = () => {
                 </CardHeader>
 
                 <CardBody>
-                  <p>Frequently Questions about the CAM API</p>
+                  <p>Frequent Questions about the CAM API</p>
                 </CardBody>
 
                 <CardFooter>
