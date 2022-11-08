@@ -31,7 +31,7 @@ function App() {
           {/* Waiting for a better way to gather release notes <Route path="/release-notes" element={<ReleaseNotes />} /> */}
           <Route path="/related-resources" element={<RelatedResources />} />
           <Route path="/api-key-signup" element={<APIKeyPage />} />
-          <Route path="/faq" element={<FAQ />} />
+          <Route path="/frequent-questions" element={<FAQ />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

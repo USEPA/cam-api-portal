@@ -76,7 +76,7 @@ export const HelpResources = () => {
 
               <Card gridLayout={{ tablet: { col: 4 } }} align="center">
                 <CardHeader>
-                  <h2>FAQs</h2>
+                  <h2>Frequent Questions</h2>
                   <IconHelpOutline
                     size={4}
                     title="Icon for other card"
@@ -85,11 +85,13 @@ export const HelpResources = () => {
                 </CardHeader>
 
                 <CardBody>
-                  <p>Frequently Asked Questions about the CAM API</p>
+                  <p>Frequently Questions about the CAM API</p>
                 </CardBody>
 
                 <CardFooter>
-                  <RouterLink to="/faq">FAQs</RouterLink>
+                  <RouterLink to="/frequent-questions">
+                    Frequent Questions
+                  </RouterLink>
                 </CardFooter>
               </Card>
               {/* <Card gridLayout={{ tablet: { col: 4 } }}  align="center">
@@ -119,7 +121,10 @@ export const HelpResources = () => {
                 </CardHeader>
 
                 <CardBody>
-                  <p>Reach out to CAMD for further questions</p>
+                  <p>
+                    Reach out to CAMD for further questions or to provide
+                    feedback
+                  </p>
                 </CardBody>
 
                 <CardFooter>
