@@ -10,6 +10,7 @@ import {
   CardFooter,
   IconHelpOutline,
   IconReduceCapacity,
+  IconApi,
   // IconNotifications,
   IconAlternateEmail,
   // IconMap,
@@ -76,7 +77,7 @@ export const HelpResources = () => {
 
               <Card gridLayout={{ tablet: { col: 4 } }} align="center">
                 <CardHeader>
-                  <h2>FAQs</h2>
+                  <h2>Frequent Questions</h2>
                   <IconHelpOutline
                     size={4}
                     title="Icon for other card"
@@ -85,11 +86,13 @@ export const HelpResources = () => {
                 </CardHeader>
 
                 <CardBody>
-                  <p>Frequently Asked Questions about the CAM API</p>
+                  <p>Frequent Questions about the CAM API</p>
                 </CardBody>
 
                 <CardFooter>
-                  <RouterLink to="/faq">FAQs</RouterLink>
+                  <RouterLink to="/frequent-questions">
+                    Frequent Questions
+                  </RouterLink>
                 </CardFooter>
               </Card>
               {/* <Card gridLayout={{ tablet: { col: 4 } }}  align="center">
@@ -110,7 +113,7 @@ export const HelpResources = () => {
               </Card> */}
               <Card gridLayout={{ tablet: { col: 4 } }} align="center">
                 <CardHeader>
-                  <h2>Contact Us</h2>
+                  <h2>Provide Feedback</h2>
                   <IconAlternateEmail
                     size={4}
                     title="Icon for other card"
@@ -119,7 +122,7 @@ export const HelpResources = () => {
                 </CardHeader>
 
                 <CardBody>
-                  <p>Reach out to CAMD for further questions</p>
+                  <p>Reach out to CAMD with further questions and feedback</p>
                 </CardBody>
 
                 <CardFooter>
@@ -128,7 +131,31 @@ export const HelpResources = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Contact Us
+                    Provide Feedback
+                  </a>
+                </CardFooter>
+              </Card>
+              <Card gridLayout={{ tablet: { col: 4 } }} align="center">
+                <CardHeader>
+                  <h2>Example API Usage</h2>
+                  <IconApi
+                    size={4}
+                    title="Icon for other card"
+                    className="palette-color-grayscale"
+                  />
+                </CardHeader>
+
+                <CardBody>
+                  <p>Example scripts for CAM API queries</p>
+                </CardBody>
+
+                <CardFooter>
+                  <a
+                    href="https://github.com/USEPA/cam-api-examples"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Example API Usage
                   </a>
                 </CardFooter>
               </Card>
