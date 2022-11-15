@@ -1,6 +1,6 @@
 # Clean Air Markets API Portal
 
-The Clean Air Markets (CAM) API Portal is the documentation site for a suite of API's that EPA's Clean Air Markets Division (CAMD) provides to access the data collected to run programs designed to reduce air pollution from power plants.  These APIs will also used by the Clean Air Markets Programd Data (CAMPD) site and the new version of the Emission Collection and Monitoring Plan System (ECMPS). 
+The Clean Air Markets (CAM) API Portal is the documentation site for a suite of API's that EPA's Clean Air Markets Division (CAMD) provides to access the data collected to run programs designed to reduce air pollution from power plants.  These APIs will also used by the Clean Air Markets Programd Data (CAMPD) site and the new version of the Emission Collection and Monitoring Plan System (ECMPS).
 
 ## npm login
 
@@ -29,6 +29,9 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
+
+> To add to the drupal "Page Javascript", use this command on Windows to place the bundled js in your clipboard for the \<script\> section: `cat build/static/js/*.js > /dev/clipboard`
+> To add any css to the drupal "Page Javascript" (e.g., for the react-swagger pages and any custom css), use this command on Windows to place the bundled css in your clipboard for the \<style\> section: `cat build/static/css/*.css > /dev/clipboard`
 
 ## License & Contributing
 ​
