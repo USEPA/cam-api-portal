@@ -11,11 +11,11 @@ export const FAQ = () => {
       <Grid row gap>
         <Grid desktop={{ col: 12 }} className="text-left">
           <h1 tabIndex={-1} ref={faqRef} style={{ outline: "none" }}>
-            Frequently Asked Questions
+            Frequent Questions
           </h1>
           <p>
-            There are currently no FAQs, but they will be added as questions are
-            submitted. Please visit the{" "}
+            There are currently no Frequent Questions, but they will be added as
+            questions are submitted. Please visit the{" "}
             <a
               href="https://www.epa.gov/airmarkets/forms/cam-api-contact-us"
               target="_blank"
