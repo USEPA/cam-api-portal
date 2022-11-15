@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import remarkGfm from "remark-gfm";
-import faq from "./faq.md";
+import { faq } from "./faq.md.js";
 
 export const FAQ = () => {
   let [readable, setReadable] = useState({ md: "" });
@@ -12,11 +12,7 @@ export const FAQ = () => {
   });
 
   useEffect(() => {
-    fetch(faq)
-      .then((res) => res.text())
-      .then((md) => {
-        setReadable({ md });
-      });
+    setReadable({ md: faq });
   }, []);
 
   return (
