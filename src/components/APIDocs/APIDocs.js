@@ -42,10 +42,7 @@ export const APIDocs = () => {
                   align="left"
                 >
                   <CardHeader>
-                    <h2
-                      className="usa-card__heading"
-                      aria-label={`${page.title} API documents card`}
-                    >
+                    <h2 aria-label={`${page.title} API documents card`}>
                       {page.title}
                     </h2>
                   </CardHeader>
@@ -59,7 +56,7 @@ export const APIDocs = () => {
                       aria-label={`Link to ${page.title} API documentation`}
                     >
                       <Button className="usa-button" type="button">
-                        View docs
+                        View {page.title} docs
                       </Button>
                     </RouterLink>
                   </CardFooter>
