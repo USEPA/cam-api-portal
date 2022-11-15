@@ -16,10 +16,7 @@ export const About = () => {
             create analyses using a variety of platforms.
           </p>
           <RouterLink to="/api-key-signup" rel="noopener noreferrer">
-            <Button
-              className="usa-button"
-              type="button"
-            >
+            <Button className="usa-button" type="button">
               Request an API Key
             </Button>
           </RouterLink>
