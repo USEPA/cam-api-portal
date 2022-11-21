@@ -31,6 +31,11 @@
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "^.+\\.svg$": "jest-svg-transformer"
+    }
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -52,6 +57,7 @@
   "devDependencies": {
     "husky": "^7.0.4",
     "jest-axe": "^5.0.1",
+    "jest-svg-transformer": "^1.0.0",
     "lint-staged": "^12.1.5",
     "prettier": "^2.5.1"
   }

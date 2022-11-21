@@ -9,11 +9,12 @@ export const About = () => {
         <Grid desktop={{ col: true }} className="text-left">
           <h1>About CAM API</h1>
           <p>
-            These Representational State Transfer (REST) APIs provide access to
-            a variety of data the Clean Air Markets Division (CAMD) collects to
-            run programs designed to reduce air pollution from power
-            plants.&nbsp; Developers can use these APIs to build applications or
-            create analyses using a variety of platforms.
+            These Representational State Transfer (REST) Application Programming
+            Interfaces (API) provide access to a variety of data the Clean Air
+            Markets Division (CAMD) collects to run programs designed to reduce
+            air pollution from power plants.&nbsp; Developers can use these APIs
+            to build applications or create analyses using a variety of
+            platforms.
           </p>
           <RouterLink to="/api-key-signup" rel="noopener noreferrer">
             <Button className="usa-button" type="button">
@@ -53,7 +54,7 @@ export const About = () => {
           </p>
 
           <a
-            href="https://easey-beta.app.cloud.gov/ecmps"
+            href="https://ecmps-beta.app.cloud.gov"
             target="_blank"
             rel="noopener noreferrer"
           >
