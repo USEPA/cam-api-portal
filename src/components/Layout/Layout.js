@@ -25,6 +25,25 @@ export const Layout = () => {
         </a>{" "}
         to provide feedback.
       </Alert>
+      <br></br>
+      <Alert
+        type="info"
+        align="left"
+        style={{ marginTop: 0 }}
+        // headingLevel prop is from a newer version of @trussworks/react-uswds
+        //headingLevel="h4"
+        slim
+      >
+        The Clean Air Markets Program Data (CAMPD) 1.1 has been released! Click{" "}
+        <a
+          href="https://campd.epa.gov/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          here
+        </a>{" "}
+        to check it out!
+      </Alert>
       <main style={{ maxWidth: "64rem", margin: "0 auto" }}>
         <Outlet />
       </main>
