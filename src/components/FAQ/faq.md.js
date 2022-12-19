@@ -12,6 +12,10 @@ export const faq = `## Frequent Questions
   * The CAMPD app user interface limits downloads from the streaming services to 1,000,000 records but there is no download records limit on the streaming services APIs.
 
 ---
+### 2) Where can I find frequent questions regarding the power plant emissions, allowance, and compliance data available in CAMPD?
+
+  * Frequent questions about data availability can be found in the [CAMPD FAQs](https://campd.epa.gov/help-support/faqs) page.
+---
 
 **To ask a question, please visit the [CAM API Feedback Page](https://www.epa.gov/airmarkets/forms/cam-api-contact-us)**
 
