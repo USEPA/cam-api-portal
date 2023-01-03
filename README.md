@@ -8,6 +8,10 @@ This project uses npm to install packages, start and testing the app, etc. Proje
 
 After configuring your npm login, users may continue experiencing issues using npm and should run `npm clean cache -f` to clean the npm cache.
 
+## Required environment variables
+
+* `$REACT_APP_API_UMBRELLA_KEY_CREATOR={cam_api_portal API key for API key signup form found in api gateway}`
+
 ## Available Scripts
 
 In the project directory, you can run:
