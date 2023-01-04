@@ -7,7 +7,7 @@ export const APIKeyPage = () => {
       registrationSource: "cam-api-portal",
       apiKey: process.env.REACT_APP_API_UMBRELLA_KEY_CREATOR,
       exampleApiUrl:
-        "https://api.epa.gov/easey/master-data-mgmt/control-technologies?api_key=?api_key={{api_key}}",
+        "https://api.epa.gov/easey/master-data-mgmt/control-technologies?api_key={{api_key}}",
       contactUrl: "https://www.epa.gov/airmarkets/forms/cam-api-contact-us",
     };
     const existingScript = document.getElementById("apisignup-script");
