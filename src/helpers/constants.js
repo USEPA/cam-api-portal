@@ -41,7 +41,7 @@ export const constants = {
       url: "https://api.epa.gov/easey/camd-services/swagger-json",
       title: "CAMD Services",
       description:
-        "CAMD services API contains an endpoint for facility submission files (I.e., emissions, monitoring plans, QA), apportioned emissions (including MATS), allowance, compliance, and facility data",
+        "CAMD services API contains an endpoint for large, prepackaged datasets of facility submission files (I.e., emissions, monitoring plans, QA), apportioned emissions (including MATS), allowance, compliance, and facility data",
     },
   ],
   releasePages: [
@@ -72,13 +72,6 @@ export const constants = {
         "Master data management API endpoints for lookup codes and data relationships",
       version: "v1.0.116",
       publish: "Thu Mar 24 2022",
-    },
-    {
-      title: "CAMD Services",
-      description:
-        "CAMD services API contains an endpoint for large, prepackaged datasets of facility submission files (I.e., emissions, monitoring plans, QA), apportioned emissions (including MATS), allowance, compliance, and facility data",
-      version: "v1.1.53",
-      publish: "Wed Nov 02 2022",
     },
   ],
   subHeaderMenuList: [
