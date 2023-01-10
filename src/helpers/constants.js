@@ -36,6 +36,13 @@ export const constants = {
       description:
         "Streaming services API contains endpoints to stream account, allowance, facilities, and emissions data",
     },
+    {
+      name: "camd-services",
+      url: "https://api.epa.gov/easey/camd-services/swagger-json",
+      title: "CAMD Services",
+      description:
+        "CAMD services API contains an endpoint for facility submission files (I.e., emissions, monitoring plans, QA), apportioned emissions (including MATS), allowance, compliance, and facility data",
+    },
   ],
   releasePages: [
     {
@@ -72,6 +79,13 @@ export const constants = {
         "Streaming services API contains endpoints to stream account, allowance, facilities, and emissions data",
       version: "v1.0.5",
       publish: "Mon Jun 13 2022",
+    },
+    {
+      title: "CAMD Services",
+      description:
+        "CAMD services API contains an endpoint for facility submission files (I.e., emissions, monitoring plans, QA), apportioned emissions (including MATS), allowance, compliance, and facility data",
+      version: "v1.1.53",
+      publish: "Wed Nov 02 2022",
     },
   ],
   subHeaderMenuList: [
