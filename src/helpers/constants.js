@@ -76,7 +76,7 @@ export const constants = {
     {
       title: "CAMD Services",
       description:
-        "CAMD services API contains an endpoint for facility submission files (I.e., emissions, monitoring plans, QA), apportioned emissions (including MATS), allowance, compliance, and facility data",
+        "CAMD services API contains an endpoint for large, prepackaged datasets of facility submission files (I.e., emissions, monitoring plans, QA), apportioned emissions (including MATS), allowance, compliance, and facility data",
       version: "v1.1.53",
       publish: "Wed Nov 02 2022",
     },
