@@ -15,25 +15,6 @@ export const Layout = () => {
         //headingLevel="h4"
         slim
       >
-        This is the first iteration of the CAM API portal, click{" "}
-        <a
-          href="https://www.epa.gov/airmarkets/forms/cam-api-contact-us"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          here
-        </a>{" "}
-        to provide feedback.
-      </Alert>
-      <br></br>
-      <Alert
-        type="info"
-        align="left"
-        style={{ marginTop: 0 }}
-        // headingLevel prop is from a newer version of @trussworks/react-uswds
-        //headingLevel="h4"
-        slim
-      >
         The Clean Air Markets Program Data (CAMPD) 1.1 has been released! Click{" "}
         <a
           href="https://campd.epa.gov/"
