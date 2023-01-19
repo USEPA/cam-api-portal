@@ -34,8 +34,23 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-> To add to the drupal "Page Javascript", use this command on Windows to place the bundled js in your clipboard for the \<script\> section: `cat build/static/js/*.js > /dev/clipboard`
-> To add any css to the drupal "Page Javascript" (e.g., for the react-swagger pages and any custom css), use this command on Windows to place the bundled css in your clipboard for the \<style\> section: `cat build/static/css/*.css > /dev/clipboard`
+#### Production build steps
+
+1. Merge any updates and re-run `npm install`
+2. Test locally with `npm run start`
+    * API docs
+    * API key signup form
+    * Contact us form
+    * Any new links or content
+    * Run unit tests
+3. Run `npm run build`
+4. Copy all css artifacts into clipboard using `cat build/static/css/*.css > /dev/clipboard` (on Windows)
+5. Paste copied css artifacts (e.g., for the react-swagger pages and any custom css) into "Page Javascript" section in drupal within a \<style\> tag
+6. Copy all javascript artifacts into clipboard using `cat build/static/js/*.js > /dev/clipboard` (in Windows)
+7. Paste copied javascript artifacts into "Page Javascript" section in drupal within a \<script\> tag
+9. Tag new version and create release within github including the complete html drupal artifact
+8. Update any cam-api-example scripts with new changes and merge into master
+
 
 ## License & Contributing
 ​
