@@ -5,6 +5,7 @@ export const constants = {
       name: "account-mgmt",
       url: "https://api.epa.gov/easey/account-mgmt/swagger-json",
       title: "Account",
+      tag: "ECMPS 2.0 Beta",
       description:
         "Account management API endpoints for account information, allowance holdings, transactions, and compliance",
     },
@@ -12,6 +13,7 @@ export const constants = {
       name: "facilities-mgmt",
       url: "https://api.epa.gov/easey/facilities-mgmt/swagger-json",
       title: "Facilities",
+      tag: "ECMPS 2.0 Beta",
       description:
         "Facility management API endpoints for power sector facilities and their attributes (e.g. units, stacks, and owners)",
     },
@@ -19,6 +21,7 @@ export const constants = {
       name: "emissions-mgmt",
       url: "https://api.epa.gov/easey/emissions-mgmt/swagger-json",
       title: "Emissions",
+      tag: "ECMPS 2.0 Beta",
       description:
         "Emissions management API endpoints for apportioned emissions data (e.g. hourly, daily, monthly, annual, and ozone season)",
     },
@@ -26,6 +29,7 @@ export const constants = {
       name: "master-data-mgmt",
       url: "https://api.epa.gov/easey/master-data-mgmt/swagger-json",
       title: "Master Data Management",
+      tag: "ECMPS 2.0 Beta",
       description:
         "Master data management API endpoints for lookup codes and data relationships",
     },
@@ -33,6 +37,7 @@ export const constants = {
       name: "streaming-services",
       url: "https://api.epa.gov/easey/streaming-services/swagger-json",
       title: "Streaming Services",
+      tag: "ECMPS 2.0 Beta",
       description:
         "Streaming services API contains endpoints to stream account, allowance, facilities, and emissions data",
     },
@@ -40,6 +45,7 @@ export const constants = {
       name: "camd-services",
       url: "https://api.epa.gov/easey/camd-services/swagger-json",
       title: "CAMD Services",
+      tag: "ECMPS 2.0 Beta",
       description:
         "CAMD services API contains an endpoint for large, prepackaged datasets of facility submission files (I.e., emissions, monitoring plans, QA), apportioned emissions (including MATS), allowance, compliance, and facility data",
     },

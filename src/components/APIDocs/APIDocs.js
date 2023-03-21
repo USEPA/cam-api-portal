@@ -7,6 +7,7 @@ import {
   CardBody,
   CardFooter,
   Button,
+  Tag,
 } from "@trussworks/react-uswds";
 import React, { useRef, useEffect } from "react";
 import { Link as RouterLink } from "react-router-dom";
@@ -29,6 +30,15 @@ export const APIDocs = () => {
             <p>
               Explore the following CAM API Swagger docs for endpoints that
               serve emissions, account, and compliance information.
+              <br></br>
+              <br></br>
+              The ECMPS 2.0 Beta tag indicates there are beta API endpoints
+              (non-production) available for testing. Visit the ECMPS 2.0 Beta
+              app{" "}
+              <a href="https://ecmps-beta.app.cloud.gov/reporting-instructions">
+                Reporting Instructions
+              </a>{" "}
+              to explore the Beta API Swagger docs.
             </p>
           </Grid>
         </Grid>
@@ -47,6 +57,7 @@ export const APIDocs = () => {
                     </h2>
                   </CardHeader>
                   <CardBody>
+                    <Tag>{page.tag}</Tag>
                     <p>{page.description}</p>
                   </CardBody>
                   <CardFooter>
