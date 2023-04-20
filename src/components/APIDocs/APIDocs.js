@@ -1,16 +1,7 @@
-import {
-  Grid,
-  GridContainer,
-  CardGroup,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Button,
-} from "@trussworks/react-uswds";
+import { CardGroup, Grid, GridContainer } from "@trussworks/react-uswds";
 import React, { useRef, useEffect } from "react";
-import { Link as RouterLink } from "react-router-dom";
 import { constants } from "../../helpers/constants";
+import { APIDocCard } from "../APIDocCard/APIDocCard";
 
 export const APIDocs = () => {
   const apiDocsRef = useRef(null);
@@ -32,37 +23,25 @@ export const APIDocs = () => {
             </p>
           </Grid>
         </Grid>
-        <Grid row gap>
+        <Grid row>
+          <h1>Production API Documentation</h1>
           <CardGroup>
-            {constants.swaggerPages.map((page, index) => {
-              return (
-                <Card
-                  gridLayout={{ desktop: { col: 6 } }}
-                  key={index}
-                  align="left"
-                >
-                  <CardHeader>
-                    <h2 aria-label={`${page.title} API documents card`}>
-                      {page.title}
-                    </h2>
-                  </CardHeader>
-                  <CardBody>
-                    <p>{page.description}</p>
-                  </CardBody>
-                  <CardFooter>
-                    <RouterLink
-                      to={`/swagger/${page.name}`}
-                      rel="noopener noreferrer"
-                      aria-label={`Link to ${page.title} API documentation`}
-                    >
-                      <Button className="usa-button" type="button">
-                        View {page.title} docs
-                      </Button>
-                    </RouterLink>
-                  </CardFooter>
-                </Card>
-              );
-            })}
+            {constants.swaggerPages
+              .filter((page) => page.env === "prod")
+              .map((page, index) => {
+                return <APIDocCard page={page} index={index}></APIDocCard>;
+              })}
+          </CardGroup>
+        </Grid>
+
+        <Grid row>
+          <h1>Beta API Documentation</h1>
+          <CardGroup>
+            {constants.swaggerPages
+              .filter((page) => page.env === "beta")
+              .map((page, index) => {
+                return <APIDocCard page={page} index={index}></APIDocCard>;
+              })}
           </CardGroup>
         </Grid>
       </GridContainer>
