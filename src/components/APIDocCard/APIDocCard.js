@@ -28,7 +28,9 @@ export const APIDocCard = ({ page, index }) => {
         </h2>
       </CardHeader>
       <CardBody>
-        <Tag>{page.tags}</Tag>
+        {page.tags.map((tag) => {
+          return <Tag>{tag}</Tag>;
+        })}
         <p>{page.description}</p>
       </CardBody>
       <CardFooter>

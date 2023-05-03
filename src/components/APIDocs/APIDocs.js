@@ -1,4 +1,4 @@
-import { CardGroup, Grid, GridContainer } from "@trussworks/react-uswds";
+import { CardGroup, Grid, GridContainer, Tag } from "@trussworks/react-uswds";
 import React, { useRef, useEffect } from "react";
 import { constants } from "../../helpers/constants";
 import { APIDocCard } from "../APIDocCard/APIDocCard";
@@ -20,6 +20,21 @@ export const APIDocs = () => {
             <p>
               Explore the following CAM API Swagger docs for endpoints that
               serve emissions, account, and compliance information.
+            </p>
+
+            <p>
+              The ECMPS 2.0 {<Tag>beta</Tag>} tag in the beta section below
+              indicate that these APIs are in beta, which means they do not
+              contain up-to-date data and are not guaranteed to be stable.{" "}
+              <b>
+                These Beta APIs are only available for testing and should not be
+                used in production applications.
+              </b>{" "}
+              Visit the "
+              <a href="https://www.epa.gov/power-sector/ecmps-re-engineering-effort">
+                ECMPS 2.0 re-engineering page
+              </a>
+              " for more information about the ECMPS re-engineering effort.
             </p>
           </Grid>
         </Grid>
