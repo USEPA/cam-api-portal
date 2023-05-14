@@ -55,60 +55,88 @@ export const constants = {
       description:
         "CAMD services API contains an endpoint for large, prepackaged datasets of facility submission files (I.e., emissions, monitoring plans, QA), apportioned emissions (including MATS), allowance, compliance, and facility data",
     },
+    // {
+    //   name: "account-mgmt",
+    //   url: "https://api.epa.gov/easey/beta/account-mgmt/swagger-json",
+    //   title: "Account",
+    //   env: "beta",
+    //   tags: ["ECMPS 2.0", "beta"],
+    //   description:
+    //     "Account management Beta API endpoints for account information, allowance holdings, transactions, and compliance",
+    // },
+
+    // {
+    //   name: "beta-auth-mgmt",
+    //   url: "https://api.epa.gov/easey/beta/auth-mgmt/swagger-json",
+    //   title: "Authentication & Authorization",
+    //   env: "beta",
+    //   tags: ["ECMPS 2.0", "beta"],
+    //   description:
+    //     "Authentication and authorization Beta API endpoints for ECMPS user authentication and token generation"
+    // },
     {
-      name: "account-mgmt",
-      url: "https://api.epa.gov/easey/beta/account-mgmt/swagger-json",
-      title: "Beta Account",
+      name: "beta-monitor-plan-mgmt",
+      url: "https://api.epa.gov/easey/beta/monitor-plan-mgmt/swagger-json",
+      title: "Monitoring Plans",
       env: "beta",
-      tags: ["ECMPS 2.0"],
+      tags: ["ECMPS 2.0", "beta"],
       description:
-        "Account management Beta API endpoints for account information, allowance holdings, transactions, and compliance",
+        "Monitoring plan management Beta API endpoints are for viewing and updating monitoring plan data.",
     },
     {
-      name: "facilities-mgmt",
-      url: "https://api.epa.gov/easey/facilities-mgmt/swagger-json",
-      title: "Beta Facilities",
+      name: "beta-qa-certification-mgmt",
+      url: "https://api.epa.gov/easey/beta/qa-certification-mgmt/swagger-json",
+      title: "QA & Certifications",
       env: "beta",
-      tags: ["ECMPS 2.0"],
+      tags: ["ECMPS 2.0", "beta"],
+      description:
+        "QA and certification management Beta API endpoints are for viewing and updating QA and certification data.",
+    },
+    {
+      name: "beta-emissions-mgmt",
+      url: "https://api.epa.gov/easey/beta/emissions-mgmt/swagger-json",
+      title: "Emissions",
+      env: "beta",
+      tags: ["ECMPS 2.0", "beta"],
+      description:
+        "Emissions management Beta API endpoints for viewing and importing monitored emissions data and viewing apportioned emissions data (e.g. hourly, daily, monthly, annual, and ozone season)",
+    },
+    {
+      name: "beta-facilities-mgmt",
+      url: "https://api.epa.gov/easey/beta/facilities-mgmt/swagger-json",
+      title: "Facilities",
+      env: "beta",
+      tags: ["ECMPS 2.0", "beta"],
       description:
         "Facility management Beta API endpoints for power sector facilities and their attributes (e.g. units, stacks, and owners)",
     },
     {
-      name: "emissions-mgmt",
-      url: "https://api.epa.gov/easey/emissions-mgmt/swagger-json",
-      title: "Beta Emissions",
+      name: "beta-master-data-mgmt",
+      url: "https://api.epa.gov/easey/beta/master-data-mgmt/swagger-json",
+      title: "Master Data Management",
       env: "beta",
-      tags: ["ECMPS 2.0"],
-      description:
-        "Emissions management Beta API endpoints for apportioned emissions data (e.g. hourly, daily, monthly, annual, and ozone season)",
-    },
-    {
-      name: "master-data-mgmt",
-      url: "https://api.epa.gov/easey/master-data-mgmt/swagger-json",
-      title: "Beta Master Data Management",
-      env: "beta",
-      tags: ["ECMPS 2.0"],
+      tags: ["ECMPS 2.0", "beta"],
       description:
         "Master data management Beta API endpoints for lookup codes and data relationships",
     },
-    {
-      name: "streaming-services",
-      url: "https://api.epa.gov/easey/streaming-services/swagger-json",
-      title: "Beta Streaming Services",
-      env: "beta",
-      tags: ["ECMPS 2.0"],
-      description:
-        "Streaming services Beta API contains endpoints to stream account, allowance, facilities, and emissions data",
-    },
-    {
-      name: "camd-services",
-      url: "https://api.epa.gov/easey/camd-services/swagger-json",
-      title: "Beta CAMD Services",
-      env: "beta",
-      tags: ["ECMPS 2.0"],
-      description:
-        "CAMD services Beta API contains an endpoint for large, prepackaged datasets of facility submission files (I.e., emissions, monitoring plans, QA), apportioned emissions (including MATS), allowance, compliance, and facility data",
-    },
+    // {
+    //   name: "streaming-services",
+    //   url: "https://api.epa.gov/easey/streaming-services/swagger-json",
+    //   title: "Beta Streaming Services",
+    //   env: "beta",
+    //   tags: ["ECMPS 2.0", "beta"],
+    //   description:
+    //     "Streaming services Beta API contains endpoints to stream account, allowance, facilities, and emissions data",
+    // },
+    // {
+    //   name: "camd-services",
+    //   url: "https://api.epa.gov/easey/camd-services/swagger-json",
+    //   title: "Beta CAMD Services",
+    //   env: "beta",
+    //   tags: ["ECMPS 2.0", "beta"],
+    //   description:
+    //     "CAMD services Beta API contains an endpoint for large, prepackaged datasets of facility submission files (I.e., emissions, monitoring plans, QA), apportioned emissions (including MATS), allowance, compliance, and facility data",
+    // },
   ],
   releasePages: [
     {
