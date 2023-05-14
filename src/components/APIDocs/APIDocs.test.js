@@ -13,7 +13,7 @@ describe("test the APIDocs page", () => {
         <APIDocs />
       </MemoryRouter>
     );
-    const textElement = screen.getByText(/API Documentation/i);
+    const textElement = screen.getByText(/Explore/i);
     expect(textElement).toBeInTheDocument();
   });
 
