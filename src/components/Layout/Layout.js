@@ -60,7 +60,7 @@ export const Layout = () => {
         //headingLevel="h4"
         slim
       >
-        The Cross-State Air Pollution Rule NOx Ozone Season Program Expanded
+        The Cross-State Air Pollution Rule NOx Ozone Season Expanded
         Group 2 (CSOSG2E) program can be used as a parameter value for any "program code" parameters with
         API requests but may not be available as an option in the interactive swagger API documentation.
         We are working to resolve this issue.
