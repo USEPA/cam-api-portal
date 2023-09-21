@@ -53,22 +53,24 @@ export const Layout = () => {
     <div>
       <SubHeader />
       <Alert
-        type="info"
+        type="warning"
         align="left"
         style={{ marginTop: 0 }}
         // headingLevel prop is from a newer version of @trussworks/react-uswds
         //headingLevel="h4"
         slim
       >
-        The Clean Air Markets Program Data (CAMPD) 1.1 has been released! Click{" "}
+        The {" "}
         <a
-          href="https://campd.epa.gov/"
+          href="https://www.govinfo.gov/content/pkg/FR-2023-07-31/pdf/2023-14180.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
-          here
+          Cross-State Air Pollution Rule NOx Ozone Season Expanded Group 2
         </a>{" "}
-        to check it out!
+          (CSOSG2E) program can be used as a parameter value for any "program code" parameters with API requests 
+          but may not be available as an option in the interactive swagger API documentation. 
+          We are working to resolve this issue.
       </Alert>
       <main style={{ maxWidth: "64rem", margin: "0 auto" }}>
         <Outlet />
