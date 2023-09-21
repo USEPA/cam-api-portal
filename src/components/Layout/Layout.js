@@ -61,8 +61,8 @@ export const Layout = () => {
         slim
       >
         The Cross-State Air Pollution Rule NOx Ozone Season Program Expanded
-        Group 2 (CSOSG2E) can be used as a paramter value for program code with
-        API requests but may not be available as an option in the swagger docs.
+        Group 2 (CSOSG2E) program can be used as a parameter value for any "program code" parameters with
+        API requests but may not be available as an option in the interactive swagger API documentation.
         We are working to resolve this issue.
       </Alert>
       <main style={{ maxWidth: "64rem", margin: "0 auto" }}>
