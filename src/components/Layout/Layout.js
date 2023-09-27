@@ -60,10 +60,29 @@ export const Layout = () => {
         //headingLevel="h4"
         slim
       >
-        The Cross-State Air Pollution Rule NOx Ozone Season Program Expanded
-        Group 2 (CSOSG2E) can be used as a paramter value for program code with
-        API requests but may not be available as an option in the swagger docs.
-        We are working to resolve this issue.
+        The following may be used with API requests but may not be available as
+        an option in the interactive swagger API documentation. We are working
+        to resolve this issue.
+        <ul>
+          <li>
+            "CSOSG2E" can be used as a parameter value for any "program code"
+            parameters
+          </li>
+          <li>
+            "Remove for Good Neighbor Plan Reissuance" and "Distribute
+            Revintaged Allowances for Good Neighbor Plan" can be used as
+            parameter values for any "transaction types" parameters
+          </li>
+        </ul>
+        Find more information at{" "}
+        <a
+          href="https://www.govinfo.gov/content/pkg/FR-2023-07-31/pdf/2023-14180.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Cross-State Air Pollution Rule NOx Ozone Season Expanded Group 2
+        </a>
+        .
       </Alert>
       <main style={{ maxWidth: "64rem", margin: "0 auto" }}>
         <Outlet />
