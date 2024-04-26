@@ -34,7 +34,7 @@ export const RelatedResources = () => {
             <CardGroup>
               <Card gridLayout={{ tablet: { col: 6 } }}>
                 <CardHeader align="center">
-                  <h2>Clean Air Markets Data Resources</h2>
+                  <h2>Clean Air and Power Data Resources</h2>
                   <IconAssessment
                     size={4}
                     title="Icon for other card"
@@ -58,7 +58,7 @@ export const RelatedResources = () => {
                           rel="noreferrer noopener"
                         >
                           {" "}
-                          CAMD Data Resources
+                          CAPD Data Resources
                         </a>{" "}
                       </p>
                     </li>
@@ -97,7 +97,7 @@ export const RelatedResources = () => {
                           rel="noreferrer noopener"
                         >
                           {" "}
-                          Frequent questions about the CAMD re-engineering
+                          Frequent questions about the CAPD re-engineering
                           effort
                         </a>{" "}
                       </p>
