@@ -37,7 +37,7 @@ jobs:
         run: docker-compose up -d && echo "Completed Build for scan"
       - name: ZAP Scan
         if: ${{ success() }}
-        uses: zaproxy/action-baseline@v0.3.0
+        uses: zaproxy/action-baseline@v0.12.0
         with:
           target: 'http://localhost:9080'
           cmd_options: '-I' # Don't fail on WARNings
