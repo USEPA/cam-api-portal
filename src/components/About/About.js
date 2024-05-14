@@ -11,10 +11,10 @@ export const About = () => {
           <p>
             These Representational State Transfer (REST) Application Programming
             Interfaces (API) provide access to a variety of data the Clean Air
-            Markets Division (CAMD) collects to run programs designed to reduce
-            air pollution from power plants.&nbsp; Developers can use these APIs
-            to build applications or create analyses using a variety of
-            platforms.
+            and Power Division (CAPD) collects to run programs designed to
+            reduce air pollution from power plants.&nbsp; Developers can use
+            these APIs to build applications or create analyses using a variety
+            of platforms.
           </p>
           <RouterLink to="/api-key-signup" rel="noopener noreferrer">
             <Button className="usa-button" type="button">

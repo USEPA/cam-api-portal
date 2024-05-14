@@ -30,10 +30,10 @@ export const HelpResources = () => {
             Help & Resources
           </h1>
           <p>
-            The Clean Air Markets APIs provide a large amount of detailed power
-            sector emissions data. Below are resources that can be used to help
-            understand these data as well as using the API endpoints to obtain
-            them.
+            The Clean Air and Power APIs provide a large amount of detailed
+            power sector emissions data. Below are resources that can be used to
+            help understand these data as well as using the API endpoints to
+            obtain them.
           </p>
         </Grid>
         <Grid row className="padding-2">
@@ -46,7 +46,7 @@ export const HelpResources = () => {
                 </CardHeader>
 
                 <CardBody>
-                  <p>View resources related to CAMD data</p>
+                  <p>View resources related to CAPD data</p>
                 </CardBody>
 
                 <CardFooter>
@@ -122,7 +122,7 @@ export const HelpResources = () => {
                 </CardHeader>
 
                 <CardBody>
-                  <p>Reach out to CAMD with further questions and feedback</p>
+                  <p>Reach out to CAPD with further questions and feedback</p>
                 </CardBody>
 
                 <CardFooter>

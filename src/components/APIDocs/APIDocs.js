@@ -41,7 +41,7 @@ export const APIDocs = () => {
               data that are apportioned for units with complex configurations,
               whereas the emissions data found in ECMPS are raw reported data
               without apportionment. For more detailed information about the
-              data CAMD collects and the specific difference between ECMPS and
+              data CAPD collects and the specific difference between ECMPS and
               CAMPD visit the "
               <a
                 href="https://www.epa.gov/airmarkets/power-sector-emissions-data"

@@ -1,6 +1,6 @@
 # Clean Air Markets API Portal
 
-The Clean Air Markets (CAM) API Portal is the documentation site for a suite of API's that EPA's Clean Air Markets Division (CAMD) provides to access the data collected to run programs designed to reduce air pollution from power plants.  These APIs will also used by the Clean Air Markets Programd Data (CAMPD) site and the new version of the Emission Collection and Monitoring Plan System (ECMPS).
+The Clean Air Markets (CAM) API Portal is the documentation site for a suite of API's that EPA's Clean Air and Power Division (CAPD) provides to access the data collected to run programs designed to reduce air pollution from power plants.  These APIs are also used by the Clean Air Markets Programd Data (CAMPD) site and the new version of the Emission Collection and Monitoring Plan System (ECMPS).
 
 ## npm login
 
