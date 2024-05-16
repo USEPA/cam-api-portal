@@ -6,8 +6,7 @@ import {
   CardHeader,
   CardBody,
   CardFooter,
-  IconAssessment,
-  IconInsights,
+  Icon,
   CardGroup,
 } from "@trussworks/react-uswds";
 
@@ -35,7 +34,7 @@ export const RelatedResources = () => {
               <Card gridLayout={{ tablet: { col: 6 } }}>
                 <CardHeader align="center">
                   <h2>Clean Air and Power Data Resources</h2>
-                  <IconAssessment
+                  <Icon.Assessment
                     size={4}
                     title="Icon for other card"
                     className="palette-color-grayscale"
@@ -110,7 +109,7 @@ export const RelatedResources = () => {
               <Card gridLayout={{ tablet: { col: 6 } }}>
                 <CardHeader align="center">
                   <h2>Application Programming Interface Resources</h2>
-                  <IconInsights
+                  <Icon.Insights
                     size={4}
                     title="Icon for other card"
                     className="palette-color-grayscale"
