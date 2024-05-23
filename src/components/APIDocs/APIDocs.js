@@ -13,6 +13,7 @@ export const APIDocs = () => {
   const apiDocsRef = useRef(null);
   useEffect(() => {
     apiDocsRef.current.focus();
+    window.scrollTo(0, 0);
   });
 
   return (
