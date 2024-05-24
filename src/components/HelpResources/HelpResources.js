@@ -8,12 +8,7 @@ import {
   CardHeader,
   CardBody,
   CardFooter,
-  IconHelpOutline,
-  IconReduceCapacity,
-  IconApi,
-  // IconNotifications,
-  IconAlternateEmail,
-  // IconMap,
+  Icon,
   CardGroup,
 } from "@trussworks/react-uswds";
 
@@ -42,7 +37,7 @@ export const HelpResources = () => {
               <Card gridLayout={{ tablet: { col: 4 } }} align="center">
                 <CardHeader>
                   <h2>Related Resources</h2>
-                  <IconReduceCapacity size={4} title="Icon for API Docs" />
+                  <Icon.ReduceCapacity size={4} title="Icon for API Docs" />
                 </CardHeader>
 
                 <CardBody>
@@ -78,7 +73,7 @@ export const HelpResources = () => {
               <Card gridLayout={{ tablet: { col: 4 } }} align="center">
                 <CardHeader>
                   <h2>Frequent Questions</h2>
-                  <IconHelpOutline
+                  <Icon.HelpOutline
                     size={4}
                     title="Icon for other card"
                     className="palette-color-grayscale"
@@ -98,7 +93,7 @@ export const HelpResources = () => {
               {/* <Card gridLayout={{ tablet: { col: 4 } }}  align="center">
                 <CardHeader>
                   <h2>API Guides</h2>
-                  <IconMap
+                  <Icon.Map
                     size={4}
                     title="Icon for other card"
                     className="palette-color-grayscale"
@@ -114,7 +109,7 @@ export const HelpResources = () => {
               <Card gridLayout={{ tablet: { col: 4 } }} align="center">
                 <CardHeader>
                   <h2>Provide Feedback</h2>
-                  <IconAlternateEmail
+                  <Icon.AlternateEmail
                     size={4}
                     title="Icon for other card"
                     className="palette-color-grayscale"
@@ -138,7 +133,7 @@ export const HelpResources = () => {
               <Card gridLayout={{ tablet: { col: 4 } }} align="center">
                 <CardHeader>
                   <h2>Example API Usage</h2>
-                  <IconApi
+                  <Icon.Api
                     size={4}
                     title="Icon for other card"
                     className="palette-color-grayscale"

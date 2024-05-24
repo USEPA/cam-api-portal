@@ -13,6 +13,7 @@ export const APIDocs = () => {
   const apiDocsRef = useRef(null);
   useEffect(() => {
     apiDocsRef.current.focus();
+    window.scrollTo(0, 0);
   });
 
   return (
@@ -84,7 +85,13 @@ export const APIDocs = () => {
             {constants.swaggerPages
               .filter((page) => page.env === "prod")
               .map((page, index) => {
-                return <APIDocCard page={page} index={index}></APIDocCard>;
+                return (
+                  <APIDocCard
+                    page={page}
+                    key={index}
+                    index={index}
+                  ></APIDocCard>
+                );
               })}
           </CardGroup>
         </Grid>
@@ -95,7 +102,13 @@ export const APIDocs = () => {
             {constants.swaggerPages
               .filter((page) => page.env === "beta")
               .map((page, index) => {
-                return <APIDocCard page={page} index={index}></APIDocCard>;
+                return (
+                  <APIDocCard
+                    page={page}
+                    key={index}
+                    index={index}
+                  ></APIDocCard>
+                );
               })}
           </CardGroup>
         </Grid>
