@@ -60,15 +60,15 @@ export const Layout = () => {
         //headingLevel="h4"
         slim
       >
-        The Clean Air Markets Program Data (CAMPD) 1.3 has been released! Click{" "}
+        Clean Air Markets Program Data (CAMPD) 1.4 has been released! Visit{" "}
         <a
           href="https://campd.epa.gov/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          here
+          campd.epa.gov
         </a>{" "}
-        to check it out!
+        to check it out.
       </Alert>
       <main style={{ maxWidth: "64rem", margin: "0 auto" }}>
         <Outlet />
