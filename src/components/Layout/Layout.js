@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { SubHeader } from "../SubHeader/SubHeader";
-import { Alert } from "@trussworks/react-uswds";
+//import { Alert } from "@trussworks/react-uswds";
 import Icons from "../../themes/epa_themes/images/sprite.svg";
 
 export const Layout = () => {
@@ -52,6 +52,10 @@ export const Layout = () => {
   return (
     <div>
       <SubHeader />
+
+      {/*
+      //Commented out Alert component for campd release
+      //This can be uncommented when needed
       <Alert
         type="info"
         align="left"
@@ -70,6 +74,8 @@ export const Layout = () => {
         </a>{" "}
         to check it out.
       </Alert>
+      */}
+
       <main style={{ maxWidth: "64rem", margin: "0 auto" }}>
         <Outlet />
       </main>
