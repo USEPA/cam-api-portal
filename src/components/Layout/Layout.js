@@ -52,6 +52,10 @@ export const Layout = () => {
   return (
     <div>
       <SubHeader />
+
+      {/*
+      //Commented out Alert component for campd release
+      //This can be uncommented when needed
       <Alert
         type="info"
         align="left"
@@ -70,6 +74,8 @@ export const Layout = () => {
         </a>{" "}
         to check it out.
       </Alert>
+      */}
+
       <main style={{ maxWidth: "64rem", margin: "0 auto" }}>
         <Outlet />
       </main>
