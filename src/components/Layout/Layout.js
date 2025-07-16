@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { SubHeader } from "../SubHeader/SubHeader";
-import { Alert } from "@trussworks/react-uswds";
+//import { Alert } from "@trussworks/react-uswds";
 import Icons from "../../themes/epa_themes/images/sprite.svg";
 
 export const Layout = () => {
